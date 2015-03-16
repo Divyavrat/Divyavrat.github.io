@@ -1,0 +1,17 @@
+ErrorDocument 400 /errors/400.shtml
+ErrorDocument 401 /errors/401.shtml
+ErrorDocument 403 /errors/403.shtml
+ErrorDocument 404 /errors/404.shtml
+ErrorDocument 500 /errors/500.shtml
+
+<Files ~ "\.(xml|css|jpe?g|png|gif|js|pdf)$">
+  Allow from all
+</Files>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
