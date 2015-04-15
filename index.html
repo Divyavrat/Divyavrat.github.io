@@ -18,6 +18,15 @@
 	
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/enchovy.css" rel='stylesheet' type='text/css' />
+
+<!-- Loading page -->
+	<div class="loader" id="loadersign"></div>
+	<script>
+	document.addEventListener("DOMContentLoaded", function(event) {
+	document.getElementById("loadersign").style.display = "none";
+	});
+	</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
@@ -64,6 +73,7 @@
 							<li><p>Website: <span><a href="http://divyavrat.webs.com">divyavrat.webs.com</a></span>
 							<span><a href="http://divyavrat.ucoz.com">divyavrat.ucoz.com</a></span>
 							<span><a href="http://divyavrat.blogspot.com">divyavrat.blogspot.com</a></span>
+							<span><a href="http://divyavrat.github.io">divyavrat.github.io</a></span>
 							</p></li>
 							<li><p>Address: <span>High Court Colony, Ratanada, Jodhpur, Rajasthan</span></p></li>
 						</ul>
@@ -261,19 +271,49 @@
 	</div>
 	<!-- Awards Ends Here -->
 
-<div class="centered-text">
-<div><h3>Projects -</h3></div>
+<!-- Projects Gallery -->
+<div class="section section-info text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Projects</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://github.com/Divyavrat/aplaun"><img src="images/aplaunos.jpg" class="img-responsive img-rounded"></a>
+                        <h3>Aplaun OS</h3>
+						<p>
+						<div class="btn-group">
+                            <a class="btn btn-default" href="aplaun.html">ReadMe</a>
+                            <a href="http://github.com/Divyavrat/aplaun" class="btn btn-default">Code</a>
+                            <a href="http://www.youtube.com/watch?v=JYMeiAToqoE" class="btn btn-default">Video</a>
+                        </div>
+						</p>
+                        <p>An ASM Portable OS with Compilers, Games,  Applications, etc.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="http://github.com/santosh977/notes-app"><img src="images/notes.jpg" class="img-responsive img-rounded"></a>
+                        <h2>Notes App</h2>
+						<p><a href="http://github.com/santosh977/notes-app" class="btn btn-default">Code</a></p>
+                        <p>Android Application to View and Add Notes.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="http://aplaun.co.nf/"><img src="images/aplaun.jpg" class="img-responsive img-rounded"></a>
+                        <h2>Aplaun Corp.</h2>
+                        <p><a class="btn btn-default" href="http://aplaun.co.nf/index.php?id=contact-us">Contact</a></p>
+                    </div>
+					<div class="col-md-3">
+                        <a href="http://divyavrat.co.nf/enchovy"><img src="images/enchovy.jpg" class="img-responsive img-rounded"></a>
+                        <h2>Enchovy</h2>
+						<p><a class="btn btn-default" href="http://divyavrat.co.nf/enchovy">Check it Out</a></p>
+						<p>A Movie Database</p>
+                    </div>
+					
+                </div>
+            </div>
+        </div>
 
-<div>Assembly -
-<a href="aplaun.html">Aplaun OS -</a>
-<a href="http://github.com/Divyavrat/aplaun">Code</a>
-</div>
-
-<div>Android -
-<a href="http://github.com/santosh977/notes-app">Notes App</a>
-</div>
-</div>
-	
 	<!-- Twitter Feed Starts Here -->
 	<div class="twitter">
 		<div class="container">
@@ -339,48 +379,6 @@
 		</div>
 	</div>
 	<!-- Twitter Feed Ends Here -->
-	<!-- Contact Starts Here -->
-	<div class="contact">
-		<div class="container">
-			<div class="contact-top">
-				<h3 class="top-title">Contact Me</h3>
-				<span class="line"></span>
-				<p>You can contact me for hiring, trainings/workshops, events, management or even counselling. My Advices are free.<br />If contact is not possible, drop me a mail.</p>
-				<div class="row contact-row">
-					<div class="col-md-4 contact-column">
-						<i class="loc"></i>
-						<p>High Court Colony, Ratanada<br> Jodhpur, Rajasthan</p>
-					</div>
-					<div class="col-md-4 contact-column">
-						<i class="mail"></i>
-						<p><a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a></p>
-					</div>
-					<div class="col-md-4 contact-column">
-						<i class="phone"></i>
-						<p>+91 88 900 55140<br>+91 94 133 24018</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="contact-form">
-					<form action="saveMessage.php" method="post">
-						<div class="text">
-							<input type="text" name="name" value="Your Name.." onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Name..';}"/>
-						</div>
-						<div class="text">
-							<input type="text" name="email" value="Your Email.." onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Email..';}"/>
-						</div>
-						<div class="text">
-							<textarea name="message" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Message';}">Your Message..</textarea>
-						</div>
-						<div class="text">
-							<input type="submit" name="submit" />
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Contact Ends Here -->
 	<!-- Footer Starts Here -->
 	<div class="footer">
 		<div class="container">
