@@ -1,2 +1,2 @@
-# Divyavrat.github.io
-My site
+# divyavrat
+My Website and Portfolio
