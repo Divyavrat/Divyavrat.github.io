@@ -22,14 +22,10 @@
 
 <!-- Loading page -->
 	<div class="loader" id="loadersign"></div>
-	<script>
-	document.addEventListener("DOMContentLoaded", function(event) {
-	document.getElementById("loadersign").style.display = "none";
-	});
-	</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/enchovy.js"></script>
 <!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
@@ -191,30 +187,7 @@
 	</div>
 			<!-- Skill Script -->
 				<script type="text/javascript" src="js/circles.js"></script>
-						         <script>
-									var colors = [
-											['#fff', '#2980b9'], ['#fff', '#2980b9'], ['#fff', '#2980b9'], ['#fff', '#2980b9']
-										];
-									<!-- for (var i = 1; i <= 10; i++) { -->
-									function makeSkillCircle(i){
-										var child = document.getElementById('circles-' + i),
-											percentage = i * 10;
-											
-										Circles.create({
-											id:         child.id,
-											percentage: percentage,
-											radius:     80,
-											width:      15,
-											number:   	percentage,
-											text:       '%',
-											colors:     colors[i - 1]
-										});
-									}
-							makeSkillCircle(10);
-							makeSkillCircle(8);
-							makeSkillCircle(6);
-							makeSkillCircle(7);
-					</script>
+		
 			<!-- Skill Script -->
 	</div>
 	<!-- Skills Ends Here -->
@@ -354,26 +327,6 @@
 			</div>
 			<!-- Slider Script -->
 					<script src="js/responsiveslides.min.js"></script>
-					 <script>
-					    // You can also use "$(window).load(function() {"
-					    $(function () {
-					      // Slideshow 4
-					      $("#slider4").responsiveSlides({
-					        auto: true,
-					        pager: true,
-					        nav: true,
-					        speed: 500,
-					        namespace: "callbacks",
-					        before: function () {
-					          $('.events').append("<li>before event fired.</li>");
-					        },
-					        after: function () {
-					          $('.events').append("<li>after event fired.</li>");
-					        }
-					      });
-					
-					    });
-					  </script>
 			<!--//End-slider-script-->
 
 		</div>
