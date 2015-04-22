@@ -2,8 +2,8 @@ var shape;
 var list = document.getElementById("shapelist");
 var scene, camera, renderer;
 var mesh,meshtext;
-var controls;
-var speed=50;
+var controls,keyboard;
+var speed=0.1,zoomspeed=10;
 var autorotate=true;
 var geometry, material;
 
@@ -193,6 +193,7 @@ init();
 
         // CONTROLS
 		controls = new THREE.OrbitControls( camera, renderer.domElement );
+		keyboard = new THREEx.KeyboardState();
 		
 		document.body.appendChild( renderer.domElement );
 
@@ -207,36 +208,44 @@ init();
         mesh.rotation.y += 0.02;}
         
 		renderer.render( scene, camera );
-		
-		//if ( keyboard.pressed("z") ) 
-	//{}
-		controls.update();
+	
+	// Rotate Buttons Shortcuts
+	if(keyboard.pressed("up")||keyboard.pressed("Q")||keyboard.pressed("q"))
+	{rotateBack();}
+	if(keyboard.pressed("down")||keyboard.pressed("E")||keyboard.pressed("e"))
+	{rotateFront();}
+	if(keyboard.pressed("left")||keyboard.pressed("A")||keyboard.pressed("a"))
+	{rotateLeft();}
+	if(keyboard.pressed("right")||keyboard.pressed("D")||keyboard.pressed("d"))
+	{rotateRight();}
+	if(keyboard.pressed("W")||keyboard.pressed("w"))
+	{rotateUp();}
+	if(keyboard.pressed("S")||keyboard.pressed("s"))
+	{rotateDown();}
+
+	if(keyboard.pressed("Z")||keyboard.pressed("z"))
+	{zoomIn();}
+	if(keyboard.pressed("X")||keyboard.pressed("x"))
+	{zoomOut();}
+
+	// Toggle Button Shortcuts
+	if(keyboard.pressed("T")||keyboard.pressed("t"))
+	{toggleAutoRotate();}
+
+	controls.update();
     }
 
+	// Old used methods to add controls and shortcuts.
 	//document.getElementById("main").onkeydown=function(){control();};
-	document.getElementById("main").addEventListener("keydown", control);
+	//document.getElementById("main").addEventListener("keydown", control);
 	//document.getElementById("main").addEventListener("onclick", getfar);
 	//document.getElementById("main").addEventListener("onmousemove", lookatit);
 	
 	if(renderer.domElement) {
     renderer.domElement.className += renderer.domElement.className ? ' response' : 'response';
 	}
-	
-	function control(event) {
-	if(event.key=="ArrowUp")
-	{rotateBack();}
-	if(event.key=="ArrowDown")
-	{rotateFront();}
-	if(event.key=="ArrowLeft"||event.key=="A"||event.key=="a")
-	{rotateLeft();}
-	if(event.key=="ArrowRight"||event.key=="D"||event.key=="d")
-	{rotateRight();}
-	if(event.key=="W"||event.key=="w")
-	{rotateUp();}
-	if(event.key=="S"||event.key=="s")
-	{rotateDown();}
-	}
 
+// Toggle Button
 function toggleAutoRotate()
 {autorotate=!autorotate;
 document.getElementById("autorotbutton").className=document.getElementById("autorotbutton").className ? '' : 'active';}
@@ -257,6 +266,6 @@ function rotateDown()
 
 // Zoom Buttons
 function zoomIn()
-{if(camera.position.z>mesh.position.z)camera.position.z -= speed;}
+{if(camera.position.z>mesh.position.z)camera.position.z -= zoomspeed;}
 function zoomOut()
-{if(camera.position.z<mesh.position.z+500)camera.position.z += speed;}
+{if(camera.position.z<mesh.position.z+500)camera.position.z += zoomspeed;}

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "Geomet",
   "description": "A software to teach geometry in an easy 3D way. All the basic shapes and more.",
   "launch_path": "/index.html",
