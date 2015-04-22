@@ -1,0 +1,16 @@
+{
+  "version": "1.0.1",
+  "name": "Geomet",
+  "description": "A software to teach geometry in an easy 3D way. All the basic shapes and more.",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/icons/icon16x16.png",
+    "48": "/icons/icon48x48.png",
+    "60": "/icons/icon60x60.png",
+    "128": "/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "Divyavrat",
+    "url": "http://divyavrat.github.io/"
+  }
+}
