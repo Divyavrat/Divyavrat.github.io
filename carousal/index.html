@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PaintIt!</title>
+        <link rel="stylesheet" href="bootstrap.css"/>
+		<link rel="icon" href="favicon.ico">
+		
+		<!-- jquery is required - zepto might do the trick too -->
+		<script src="jquery.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<!-- in a production environment, just include the minified script. It contains the board and the default controls (size, nav, colors, download): -->
+		<script src="drawingboard.min.js"></script>
+    </head>
+    <body>
+<div class="row">
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#myCarousel" class="active"></li>
+                    <li data-target="#myCarousel"></li>
+                    <li data-target="#myCarousel"></li>
+                    <li data-target="#myCarousel"></li>
+                </ul>
+
+                <!-- Slide 0 -->
+                <div class="item active">
+                    <img src="test.jpg">
+                    <div class="carousel-caption">
+                        <h3>Image 0</h3>
+                        <p>Image 0 Description</p>
+                    </div>
+                </div>
+                <!-- Slide 1 -->
+                <div class="item">
+                    <img src="test.jpg">
+                    <div class="carousel-caption">
+                        <h3>Image 1</h3>
+                        <p>Image 1 Description</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="item">
+                    <img src="test.jpg">
+                    <div class="carousel-caption">
+                        <h3>Image 2</h3>
+                        <p>Image 2 Description</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="item">
+                    <img src="test.jpg">
+                    <div class="carousel-caption">
+                        <h3>Image 3</h3>
+                        <p>Image 3 Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+		
+		<script>
+		$(document).ready(function() {
+    $('#myCarousel').carousel({
+        interval: false,
+		wrap:true
+    });
+});
+		</script>
+	</div>
+</body>
+</html>
