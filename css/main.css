@@ -1636,7 +1636,7 @@ header .header-logo a {
 	background: #151515;
 	width: 100%;
 	height: 100%;
-	background-image: url(../images/intro-bg.jpg);
+	background-image: url('https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1366&q=80');
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -1952,7 +1952,7 @@ header .header-logo a {
 	height: 100%;
 	background: #EBEBEB;
 	width: 50%;
-	background-image: url(../images/profile-bg.jpg);
+	background-image: url(../images/profile.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -2764,7 +2764,7 @@ header .header-logo a {
  * ------------------------------------------------------------------- */
 #contact {
 	background-color: #111111;
-	background-image: url(../images/profile-bg.jpg);
+	background-image: url(../images/profile.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
