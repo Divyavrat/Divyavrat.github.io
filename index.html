@@ -1,912 +1,607 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyavrat Jugtawat - Sr. Software Engineer CV</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            /* Modern Blue */
+            --secondary: #1e293b;
+            /* Slate Dark */
+            --text-main: #334155;
+            /* Slate Gray */
+            --text-light: #64748b;
+            /* Light Gray */
+            --bg-body: #f8fafc;
+            /* Off-white background */
+            --bg-card: #ffffff;
+            /* White card background */
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
 
-	<!--- basic page needs
-   ================================================== -->
-	<meta charset="utf-8">
-	<title>Divyavrat</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-	<!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
 
-	<!-- CSS
-   ================================================== -->
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/main.css">
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
 
-	<!-- script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+        /* Header Section */
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-	<!-- favicons
-	================================================== -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+        .header-info h1 {
+            color: var(--secondary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2H60KNHBTL"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .header-info h2 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
 
-		gtag('config', 'G-2H60KNHBTL');
-	</script>
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            text-align: right;
+        }
 
+        .contact-details span,
+        .contact-details a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .download-btn {
+            align-self: flex-end;
+            background-color: var(--primary);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 0.8rem;
+            justify-content: center !important;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+            background-color: #1d4ed8;
+        }
+
+        @media (max-width: 768px) {
+            .download-btn {
+                align-self: flex-start;
+            }
+        }
+
+        /* Main Content Grid */
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            /* Main content left, Sidebar right */
+            gap: 3rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .company {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .job-desc ul {
+            list-style-position: outside;
+            margin-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .job-desc li {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .tech-stack strong {
+            color: var(--secondary);
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 2rem;
+        }
+
+        .project-title {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 1.05rem;
+            display: inline-block;
+        }
+
+        .project-tech {
+            display: inline-block;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+
+        .project-desc {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .project-desc ul {
+            list-style-position: outside;
+            margin-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Skills Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: #eff6ff;
+            color: var(--primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #dbeafe;
+        }
+
+        /* Sidebar Info */
+        .sidebar-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .sidebar-text {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .degree {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .compact-list {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .compact-list li {
+            margin-bottom: 0.25rem;
+            color: var(--text-main);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                /* Stack columns on mobile */
+                gap: 2rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-info h1 {
+                font-size: 2rem;
+            }
+
+            .contact-details {
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .contact-details span,
+            .contact-details a {
+                justify-content: flex-start;
+            }
+        }
+
+        @page {
+            margin: 1cm;
+        }
+    </style>
 </head>
 
-
-<body id="top">
-
-	<!-- header 
-   ================================================== -->
-	<header>
-
-		<div class="header-logo">
-			<a href="index.html">Divyavrat</a>
-		</div>
-
-		<a id="header-menu-trigger" href="#0">
-			<span class="header-menu-text">Menu</span>
-			<span class="header-menu-icon"></span>
-		</a>
-
-		<nav id="menu-nav-wrap">
-
-			<a href="#0" class="close-button" title="close"><span>Close</span></a>
-
-			<h3>Hello.</h3>
-
-			<ul class="nav-list">
-				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-				<li><a class="smoothscroll" href="#about" title="">About</a></li>
-				<li><a class="smoothscroll" href="#skills" title="">Skills</a></li>
-				<li><a class="smoothscroll" href="#credentials" title="">Experience</a></li>
-				<li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
-				<li><a class="smoothscroll" href="#stats" title="">Stats</a></li>
-				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-			</ul>
-
-			<ul class="header-social-list">
-				<li>
-					<a href="#"><i class="fa fa-facebook-square"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-behance"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-				</li>
-			</ul>
-
-		</nav> <!-- end #menu-nav-wrap -->
-
-	</header> <!-- end header -->
-
-
-	<!-- home
-   ================================================== -->
-	<section id="home">
-
-		<div class="overlay"></div>
-		<div class="gradient-overlay"></div>
-
-		<div class="home-content-table">
-
-			<div class="home-content-tablecell">
-				<div class="row">
-					<div class="col-twelve">
-						<div class="home-bottom-text">
-
-							<h3 class="animate-intro">Hello,</h3>
-							<h1 class="animate-intro">
-								I am Divyavrat Jugtawat. <br>
-								Sr. Product Engineer
-							</h1>
-
-							<ul class="home-section-links">
-								<li class="animate-intro">More <a href="#about" class="smoothscroll">About Me</a></li>
-								<li class="animate-intro">View <a href="#portfolio" class="smoothscroll">My Works</a>
-								</li>
-								<li class="animate-intro">Contact <a href="#contact" class="smoothscroll">By Email</a>
-								</li>
-							</ul>
-
-						</div> <!-- end home-bottom-text -->
-					</div> <!-- end col-twelve -->
-				</div> <!-- end row -->
-			</div> <!-- end home-content-tablecell -->
-		</div> <!-- end home-content-table -->
-
-		<a href="#about" class="scroll-icon smoothscroll">
-			<span class="icon-DownArrow"></span>
-		</a>
-
-	</section> <!-- end home -->
-
-
-	<!-- about
-   ================================================== -->
-	<section id="about">
-
-		<div class="about-profile-bg"></div>
-
-		<div class="about-wrap">
-
-			<div class="about-profile">
-
-				<div class="about-profile-bg"></div>
-
-				<div class="intro">
-					<h3 class="animate-this">About</h3>
-					<h1 class="animate-this">More About Me.</h1>
-
-					<p class="lead animate-this">Sr. Software Engineer with 10+ years of experience leading teams.</p>
-				</div>
-
-				<p class="animate-this">
-					Delivered over 100 projects for US and international clients. Expert in the MERN stack (React.js,
-					Express, MongoDB) and leveraging AI tools (Github Copilot, Gemini) for efficient full-stack
-					development, prototyping, and code review.
-				</p>
-
-				<p class="animate-this">
-					Detailed experience in leading teams, training interns, and managing large scale projects in
-					Utility, Retail, and Education sectors.
-				</p>
-
-				<p>
-					<a href="#contact" class="button full-width animate-this">Contact Me</a>
-					<a href="cv.pdf" download="DivyavratCV.pdf"
-						class="button button-primary full-width animate-this">Download CV</a>
-				</p>
-
-			</div> <!-- end about-profile  -->
-
-			<div class="about-services">
-
-				<div class="intro">
-					<h3 class="animate-this">Services</h3>
-					<h1 class="animate-this">What I Do.</h1>
-
-					<p class="lead animate-this">Website Development - in React, PHP<br>
-						Apps - Hybrid & Native</p>
-				</div>
-
-				<ul class="services">
-					<li class="item-branding animate-this">
-						<div class="icon-wrap">
-							<i class="icon-RegisteredTrademark"></i>
-						</div>
-						<div class="service-item">
-							<h4>Website Development</h4>
-							<p>&nbsp;</p>
-						</div>
-					</li>
-					<li class="item-photography animate-this">
-						<div class="icon-wrap">
-							<i class="icon-Picture"></i>
-						</div>
-						<div class="service-item">
-							<h4>App Development</h4>
-							<p>&nbsp;</p>
-						</div>
-					</li>
-					<li class="item-webdesign animate-this">
-						<div class="icon-wrap">
-							<i class="icon-HTML"></i>
-						</div>
-						<div class="service-item">
-							<h4>Web Design & Prototypes</h4>
-							<p>&nbsp;</p>
-						</div>
-					</li>
-					<li class="item-uiux animate-this">
-						<div class="icon-wrap">
-							<i class="icon-Checked"></i>
-						</div>
-						<div class="service-item">
-							<h4>Custom Applications</h4>
-							<p>&nbsp;</p>
-						</div>
-					</li>
-				</ul>
-
-			</div> <!-- end about-services  -->
-
-		</div> <!-- end about-wrap  -->
-
-	</section> <!-- end about -->
-
-
-	<!-- about
-   ================================================== -->
-	<section id="skills">
-
-		<div class="overlay"></div>
-		<div class="gradient-overlay"></div>
-
-		<div class="row wide">
-			<div class="col-skills">
-
-				<div class="section-intro">
-					<h3 class="animate-this">Skillset</h3>
-					<h1 class="animate-this">I've Got Some Skills.</h1>
-
-					<p class="animate-this">Worked on 20 projects in PHP, 15 apps and 40 projects in React.</p>
-				</div>
-
-				<ul class="skill-bars">
-					<li class="animate-this" data-animate="fadeInRight">
-						<div class="progress percent90"><span>90%</span></div>
-						<strong>React JS</strong>
-					</li>
-					<li class="animate-this" data-animate="fadeInRight">
-						<div class="progress percent95"><span>95%</span></div>
-						<strong>PHP</strong>
-					</li>
-					<li class="animate-this" data-animate="fadeInRight">
-						<div class="progress percent90"><span>90%</span></div>
-						<strong>HTML5</strong>
-					</li>
-					<li class="animate-this" data-animate="fadeInRight">
-						<div class="progress percent85"><span>85%</span></div>
-						<strong>CSS3</strong>
-					</li>
-					<li class="animate-this" data-animate="fadeInRight">
-						<div class="progress percent70"><span>70%</span></div>
-						<strong>JQuery</strong>
-					</li>
-					<li class="animate-this" data-animate="fadeInRight">
-						<div class="progress percent75"><span>75%</span></div>
-						<strong>Wordpress</strong>
-					</li>
-				</ul>
-
-			</div> <!-- end col-six -->
-		</div> <!-- end row wide -->
-
-	</section> <!-- end skills -->
-
-
-	<!-- credentials
-   ================================================== -->
-	<section id="credentials">
-
-		<div class="row narrow section-intro with-bottom-sep">
-			<div class="col-twelve">
-				<h3 class="animate-this">Career and Education</h3>
-				<h1 class="animate-this">More of My Credentials.</h1>
-				<p class="lead">I am passionate about creating projects that solve problems and look amazing.</p>
-			</div>
-		</div> <!-- end section-intro -->
-
-		<div class="row wide credentials-content">
-
-			<div class="col-six tab-full left">
-
-				<h2 class="animate-this">Experience</h2>
-
-				<div class="timeline-wrap">
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-briefcase"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2023 - Present</p>
-							<h3>Utility Tech Product MNC</h3>
-							<h4>Sr. Product Engineer – React</h4>
-						</div>
-						<div class="timeline-content">
-							<p>Multiple team projects in the Utility sector for US, Australia, Canada and Asian clients.
-								Training new interns. New implementations like Usage Graphs & Charts. AI use to boost
-								productivity.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-briefcase"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2021 - 2023</p>
-							<h3>Nuvento Pvt Ltd. - Sheer Analytics</h3>
-							<h4>Project Manager</h4>
-						</div>
-						<div class="timeline-content">
-							<p>Intern training and talent acquisition. Managed multiple cross functional teams in Retail
-								and Utility sectors. Spearheaded implementations of new features and modules.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-briefcase"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2020</p>
-							<h3>Don Sussman Pvt., Washington DC, USA</h3>
-							<h4>Tech lead</h4>
-						</div>
-						<div class="timeline-content">
-							<p>Developed an entire web portal for student online learning and exam. Created accounting
-								reports and Payment gateway. Android App for Student Training.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-briefcase"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2015-2019</p>
-							<h3>Sarga Technologies , Jodhpur</h3>
-							<h4>Sr. Software Engineer</h4>
-						</div>
-						<div class="timeline-content">
-							<p>Developed a new React Js Webapp, 1 React Native App. Creating design from Zeplin/Sketch
-								to React Webapp. Enterprise Level management Webapp.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-briefcase"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2015</p>
-							<h3>Ashapura Infocom, Jodhpur</h3>
-							<h4>Web Developer</h4>
-						</div>
-						<div class="timeline-content">
-							<p>In a group of 3, led the team to rapidly create 2 Websites. Single Handed worked on
-								initial build phase of Jewellery Shop Software in Java Swing.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-briefcase"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2014</p>
-							<h3>HCL CDC, Jodhpur</h3>
-							<h4>Android Java Trainee</h4>
-						</div>
-						<div class="timeline-content">
-							<p>Training and development.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-				</div> <!-- end timeline-wrap -->
-
-			</div> <!-- end col-six -->
-
-			<div class="col-six tab-full right">
-
-				<h2 class="animate-this">Education</h2>
-
-				<div class="timeline-wrap">
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-graduation-cap"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2014</p>
-							<h3>WS Cube Infotech, Jodhpur</h3>
-							<h4>Android Development Course</h4>
-						</div>
-						<div class="timeline-content">
-							<p>Led a team of 6 to create Android Apps - BMI Calculator, Notes Taking Cloud App, Book
-								Sharing.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-					<div class="timeline-block animate-this">
-						<div class="timeline-ico">
-							<i class="fa fa-graduation-cap"></i>
-						</div>
-						<div class="timeline-header">
-							<p class="timeframe">2011-2015</p>
-							<h3>JIET, Jodhpur</h3>
-							<h4>B. Tech.</h4>
-						</div>
-						<div class="timeline-desc">
-							<p>Taught multiple coding workshops. Participated in hackathons. Created Aplaun OS and
-								published research papers on Assembly Language OS Dev.</p>
-						</div>
-					</div> <!-- end timeline-block -->
-
-				</div> <!-- end timeline-wrap -->
-
-			</div> <!-- end col-six -->
-
-		</div> <!-- end row wide -->
-
-	</section> <!-- end credentials -->
-
-
-	<!-- portfolio
-   ================================================== -->
-	<section id="portfolio">
-
-		<div class="row narrow section-intro with-bottom-sep">
-			<div class="col-twelve">
-				<h3 class="animate-this">Portfolio</h3>
-				<h1 class="animate-this">See My Latest Projects.</h1>
-
-				<p class="lead animate-this">I am passionate about creating projects that solve problems and look
-					amazing.</p>
-			</div>
-		</div> <!-- end row section-intro -->
-
-		<div class="row portfolio-content">
-			<div class="col-twelve">
-				<div id="folio-wrap" class="bricks-wrapper">
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/cloneos.png" data-sub-html="#08">
-							<a href="#" class="overlay">
-								<img src="images/projects/cloneos.png" alt="Aplaun OS">
-								<div class="item-text">
-									<span class="folio-types">
-										Assembly 8086
-									</span>
-									<h3 class="folio-title">Aplaun OS</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="08" class='hide'>
-							<h4>Aplaun OS - Assembly 8086</h4>
-							<p>Initiated and worked 2yrs to build a new portable OS with Compilers, Games, and Softwares
-								using 8086 Assembly. Authored 2 research papers. <a
-									href="https://github.com/Divyavrat/aplaunos">Details</a></p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/spivy.jpg" data-sub-html="#01">
-							<a href="#" class="overlay">
-								<img src="images/projects/spivy.jpg" alt="Councilman André L. Spivey">
-								<div class="item-text">
-									<span class="folio-types">
-										Android, PhoneGap
-									</span>
-									<h3 class="folio-title">Councilman André L. Spivey</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="01" class='hide'>
-							<h4>Councilman André L. Spivey</h4>
-							<p>Election Promotion App for Councilman from Detroit, Michigan. Added Publicity Material to
-								support upcoming elections. Website - App content synchronization.</p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/sandeep.jpg" data-sub-html="#02">
-							<a href="#" class="overlay">
-								<img src="images/projects/sandeep.jpg" alt="Sandeep Khurana Music Maestro">
-								<div class="item-text">
-									<span class="folio-types">
-										Android, PhoneGap
-									</span>
-									<h3 class="folio-title">Sandeep Khurana Music Maestro</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="02" class='hide'>
-							<h4>Sandeep Khurana Music Maestro</h4>
-							<p>Music & Meditation app showcasing 20 tracks of all genres. Design and Development for
-								Relaxing Sounds Infinite app and Music Harmony app.</p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/bookstore.jpg"
-							data-sub-html="#09">
-							<a href="#" class="overlay">
-								<img src="images/projects/bookstore.jpg" alt="Jai Vijay Book Centre">
-								<div class="item-text">
-									<span class="folio-types">
-										Java
-									</span>
-									<h3 class="folio-title">Jai Vijay Book Centre</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="09" class='hide'>
-							<h4>Jai Vijay Book Centre</h4>
-							<p>Features for Job Search and Book sale, Buy Books in-app. Web Admin to manage App’s
-								content.
-							</p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this"
-							data-src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-							data-sub-html="#03">
-							<a href="#" class="overlay">
-								<img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-									alt="Sanjeev Kapoor">
-								<div class="item-text">
-									<span class="folio-types">
-										HTML
-									</span>
-									<h3 class="folio-title">Sanjeev Kapoor</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="03" class='hide'>
-							<h4>Sanjeev Kapoor</h4>
-							<p>Website for the Indian Master Chef’s Canadian Restaurant Chain. <a
-									href="https://en.wikipedia.org/wiki/Sanjeev_Kapoor">Details</a></p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/pizza.jpg" data-sub-html="#05">
-							<a href="#" class="overlay">
-								<img src="images/projects/pizza.jpg" alt="Peppinos Pizzeria">
-								<div class="item-text">
-									<span class="folio-types">
-										Website in HTML
-									</span>
-									<h3 class="folio-title">Peppinos Pizzeria</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="05" class='hide'>
-							<h4>Peppinos Pizzeria</h4>
-							<p>Modified Web Design for famous Pizzeria with more than 20 chains across America. <a
-									href="https://www.peppinospizza.com/">Details</a></p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/soulxslayer.jpg"
-							data-sub-html="#06">
-							<a href="#" class="overlay">
-								<img src="images/projects/soulxslayer-sm.jpg"
-									alt="Portfolio for Graphic Designer SoulXSlayer">
-								<div class="item-text">
-									<span class="folio-types">
-										Web Development
-									</span>
-									<h3 class="folio-title">Portfolio for SoulXSlayer</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="06" class='hide'>
-							<h4>Portfolio for Graphic Designer SoulXSlayer</h4>
-							<p>Complete Web Design. <a href="https://soulxslayer.github.io/">Details</a></p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/evian.jpg" data-sub-html="#07">
-							<a href="#" class="overlay">
-								<img src="images/projects/evian.jpg" alt="Website for DJ Artist Evian Cafun">
-								<div class="item-text">
-									<span class="folio-types">
-										PHP
-									</span>
-									<h3 class="folio-title">Website for DJ Artist Evian Cafun</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="07" class='hide'>
-							<h4>Website for DJ Artist Evian Cafun</h4>
-							<p>Complete Design according to client's requirements. <a
-									href="https://eviancafun.com/">Details</a></p>
-						</div>
-					</div> <!-- end folio-item -->
-
-					<div class="brick folio-item">
-						<div class="item-wrap animate-this" data-src="images/projects/leo.jpg" data-sub-html="#10">
-							<a href="#" class="overlay">
-								<img src="images/projects/leo-sm.jpg" alt="Leonardo Callie">
-								<div class="item-text">
-									<span class="folio-types">
-										HTML
-									</span>
-									<h3 class="folio-title">Leonardo Callie</h3>
-								</div>
-							</a>
-							<a href="#" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-						</div> <!-- end item-wrap -->
-						<div id="10" class='hide'>
-							<h4>Leonardo Callie</h4>
-							<p>E-Portfolio of Italian Web Designer.
-								<a href="https://behance.net/leocallie">Details</a>
-							</p>
-						</div>
-					</div> <!-- end folio-item -->
-
-				</div> <!-- end folio-wrap -->
-			</div> <!-- end twelve -->
-		</div> <!-- end portfolio-content -->
-
-		<div class="row">
-			<div class="col-twelve">
-				<br><br>
-				<h3 class="animate-this">Additional Projects</h3>
-				<div class="row">
-					<div class="col-twelve">
-						<ul>
-							<li><b>Boutique Retail Website</b> - Worked on Store / Delivery Retail with in-store
-								Services. Modules for administration of appointments, customer management, order
-								management.</li>
-							<li><b>Interview Management</b> - Application to manage Jobs, Candidates and set up online
-								video interviews. Inbuilt-feedback system. Integrated Video calling, chatting features.
-							</li>
-							<li><b>Charity & Donations Management</b> - Multi-layered full stack webapp to create and
-								manage US donation pages. Created using latest ES6 features. DOM Testing with Jest.</li>
-							<li><b>Eco Pro Cleaning</b> - Created PHP site with features like Cleaner Log, Services,
-								Blog, Admin, Login, Appointment, Invoices.</li>
-							<li><b>Asmin khatoon Unique Home Care</b> - Static site design and deployment.</li>
-							<li><b>SRA Website</b> - Created MERN site and Adobe XD UI design with multiple modules like
-								Login, Pricing.</li>
-							<li><b>Patitva Matrimony Site</b> - Created React UI from Zeplin UI design.</li>
-							<li><b>Event Management App</b> - Android App with JIET student team.</li>
-							<li><b>File Sharing App</b> - Centralised server and multiple user roles.</li>
-							<li><b>Dictionary Chrome Extension</b> - Show internal jargon meaning from enterprise
-								specialized dictionary file.</li>
-							<li><b>Offers and Coupon Site</b> - Competitor to grabon and coupondunia.</li>
-						</ul>
-						<ul>
-							<li><b>Delhi World</b> - Complete Wholesale Retailer solution. Step-wise User access - Owner
-								> Wholesale Buyer > Retailer > Customer. In-built chat and payment.</li>
-							<li><b>Cricket Fantasy App</b> - App Development with more than 10k+ lines of code. Payment
-								Management with 3 types of in-app currencies. Enterprise Grade Admin.</li>
-							<li><b>Doctor Medical slip Software</b> - Designed new Doctor Medical Slip Software for
-								Doctors to rapidly create slips.</li>
-							<li><b>Coaching Center Management</b> - Student Attendance, Online Test, QA with teachers.
-								Discussion forums. Anonymous teacher ratings.</li>
-							<li><b>TV Tub Android App</b> - Fan-made wallpapers, video edits for Indian TV Drama
-								Serials.</li>
-							<li><b>E-Invitation</b> - Static websites for private weddings.</li>
-							<li><b>Haptik Chrome Plugin</b> - For assistants with radio FM, games, wallpapers, inbuilt
-								google search.</li>
-							<li><b>Pushkarna Brahman Family Tree</b> - Core PHP site with node search.</li>
-							<li><b>E-Learning Hybridskill Training</b> - In React.</li>
-							<li><b>Donation Site</b> - For Non-Profit GlobalMindED.</li>
-							<li><b>Australia Rentals Portal</b> - In React.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</section> <!-- end portfolio -->
-
-
-	<!-- stats
-   ================================================== -->
-	<section id="stats">
-
-		<div class="row">
-			<div class="col-twelve">
-				<div class="block-1-4 block-tab-1-2 block-mob-full stats-list">
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-Briefcase"></i>
-						</div>
-						<h5 class="stat-title">
-							Projects Completed
-						</h5>
-						<h3 class="stat-count">253</h3>
-					</div> <!-- end stat -->
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-AddressBook"></i>
-						</div>
-						<h5 class="stat-title">
-							Clients
-						</h5>
-						<h3 class="stat-count">130</h3>
-					</div> <!-- end stat -->
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-Diploma1"></i>
-						</div>
-						<h5 class="stat-title">
-							Apps Published
-						</h5>
-						<h3 class="stat-count">15</h3>
-					</div> <!-- end stat -->
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-Idea"></i>
-						</div>
-						<h5 class="stat-title">
-							Design Prototypes
-						</h5>
-						<h3 class="stat-count">220</h3>
-					</div> <!-- end stat -->
-
-				</div> <!-- end stats-list -->
-			</div> <!-- end col-twelve -->
-		</div> <!-- end row -->
-
-	</section> <!-- end stats -->
-
-
-	<!-- contact
-   ================================================== -->
-	<section id="contact">
-
-		<div class="overlay"></div>
-
-		<div class="row narrow section-intro">
-			<div class="col-twelve">
-				<h3 class="animate-this">Contact</h3>
-				<h1 class="animate-this">Feel Free to Contact Me.</h1>
-
-				<p class="lead animate-this">I'm proud of my work. I love to discuss how technology can solve problems.
-				</p>
-			</div>
-		</div> <!-- end section-intro -->
-
-		<!-- <div class="row contact-form">
-   		<div class="col-twelve">
-
-            <form name="contactForm" id="contactForm" method="post">
-      			
-
-                  <div class="form-field animate-this">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field animate-this">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field animate-this">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field animate-this">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div> 
-
-                  <div class="form-field animate-this">
-                     <button class="submitform">Submit</button>
-
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
-								</div>
-							</div>
-                  </div>
-
-      			
-      		</form> 
-
-            <div id="message-warning"></div> 
-
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
-
-         </div>   		
-   	</div> --> <!--  end row contact-form -->
-
-		<div class="row contact-info">
-
-			<div class="col-four tab-full">
-				<h5 class="animate-this">Currently</h5>
-
-				<p class="animate-this">
-					Jodhpur, Rajasthan<br>
-					342001 India
-				</p>
-			</div> <!-- end col-four -->
-
-			<div class="col-four tab-full collapse">
-				<h5 class="animate-this">Email Me At</h5>
-
-				<p class="animate-this">
-					<a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a>
-				</p>
-			</div> <!-- end col-four -->
-
-			<div class="col-four tab-full">
-				<h5 class="animate-this">Call Me At</h5>
-				<p class="animate-this"><a href="tel:+918890055140">Mobile: (+91) 88900 55140</a><br>
-					WhatsApp: (+91) 88900 55140</p>
-			</div> <!-- end col-four -->
-
-		</div> <!-- end row contact-info -->
-
-	</section> <!-- end contact -->
-
-
-	<!-- footer
-   ================================================== -->
-	<footer>
-		<div class="row">
-
-			<div class="col-twelve tab-full social">
-				<ul class="footer-social">
-					<li><a href="https://www.linkedin.com/in/divyavrat/">Linkedin</a></li>
-					<li><a href="https://github.com/divyavrat/">Github</a></li>
-					<!-- <li><a href="#">Behance</a></li>
-					<li><a href="#">Dribble</a></li>
-					<li><a href="#">Instagram</a></li> -->
-				</ul>
-			</div>
-
-			<!-- <div class="col-twelve tab-full">
-	      	<div class="copyright">
-		        	<span>© Copyright Howdy 2016.</span> 		        	         	
-		      </div>		                  
-	      </div>      	 -->
-
-		</div> <!-- end row -->
-
-		<div id="go-top">
-			<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-UpArrow"></i></a>
-		</div>
-	</footer>
-
-	<div id="preloader">
-		<div id="loader"></div>
-	</div>
-
-	<!-- Java Script
-   ================================================== -->
-	<script src="js/jquery-2.2.4.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-info">
+                <h1>Divyavrat Jugtawat</h1>
+                <h2>Sr. Software Engineer</h2>
+                <p style="max-width: 600px; color: var(--text-light); margin-top: 0.5rem;">
+                    Sr. Software Engineer with 10+ years of experience leading teams and delivering over 100 projects
+                    for US and international clients. Expert in the MERN stack (React.js, Express, MongoDB) and
+                    leveraging AI tools (Github Copilot, Gemini) for efficient full-stack development, prototyping, and
+                    code review.
+                </p>
+            </div>
+            <div class="contact-details">
+                <a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a>
+                <a href="tel:+918890055140">(+91) 88900 55140</a>
+                <span>Jodhpur, Rajasthan, India</span>
+                <a href="https://www.linkedin.com/in/divyavrat/">LinkedIn</a>
+                <a href="https://github.com/divyavrat/">GitHub</a>
+                <a href="cv.pdf" download="DivyavratCV.pdf" class="download-btn">Download CV</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-column">
+                <section>
+                    <h3>Experience</h3>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Sr. Product Engineer – React</div>
+                                <div class="company">Utility Tech Product MNC</div>
+                            </div>
+                            <div class="date">2023 - Present</div>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Multiple team projects in the Utility sector for US, Australia, Canada and Asian
+                                    clients.</li>
+                                <li>Training new interns to work on existing codebase.</li>
+                                <li>New implementations of old features like Usage Graphs & Charts.</li>
+                                <li>AI use to boost productivity for code completion, reviews, debugging, documentations
+                                    and task management using Github Copilot, Chat GPT, Claude, Gemini CLI.</li>
+                            </ul>
+                            <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, Postgres SQL
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Project Manager</div>
+                                <div class="company">Nuvento Pvt Ltd. - Sheer Analytics</div>
+                            </div>
+                            <div class="date">2021 - 2023</div>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Intern training and talent acquisition taking 200+ technical coding rounds and
+                                    interviews.</li>
+                                <li>Managed multiple cross functional teams in large scale projects in Retail and
+                                    Utility sectors.</li>
+                                <li>Spearheaded implementations of new features and modules.</li>
+                                <li>Code refactoring, code-reviews for Industry standards.</li>
+                            </ul>
+                            <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, HTML5, CSS3, PHP
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Tech Lead</div>
+                                <div class="company">Don Sussman Pvt., Washington DC, USA</div>
+                            </div>
+                            <div class="date">2020</div>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Developed an entire web portal for student online learning and exam.</li>
+                                <li>Created accounting reports and Payment gateway for fee submission.</li>
+                                <li>Created Android App for Student Training. RnD, Development and Testing.</li>
+                                <li>Daily stakeholder meetings for effective transformation of requirements to technical
+                                    solutions.</li>
+                                <li>Long term Project Support provided with timely resolutions.</li>
+                            </ul>
+                            <div class="tech-stack"><strong>Tech Stack:</strong> Core PHP, Android Java, Expo React
+                                Native</div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Sr. Software Engineer</div>
+                                <div class="company">Sarga Technologies, Jodhpur</div>
+                            </div>
+                            <div class="date">2015 - 2019</div>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Developed a new React Js Webapp, 1 React Native App.</li>
+                                <li>Created design from Zeplin and Sketch files to React Webapp.</li>
+                                <li>Worked with Client to fulfill User Stories.</li>
+                                <li>Created Enterprise Level management Webapp in React.</li>
+                                <li>Recreated 1 Static Website in React Js from Laravel.</li>
+                                <li>Improved Designs for 3 websites in Laravel and React.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Web Developer</div>
+                                <div class="company">Ashapura Infocom, Jodhpur</div>
+                            </div>
+                            <div class="date">2015</div>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>In a group of 3, led the team to rapidly create 2 Websites.</li>
+                                <li>Single Handed worked on initial build phase of Jewellery Shop Software in Java
+                                    Swing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Key Projects</h3>
+
+                    <div class="project-item">
+                        <div class="project-title">Aplaun OS</div> <span class="project-tech">- Assembly 8086</span>
+                        <div class="project-desc">
+                            <ul>
+                                <li>Initiated and worked 2yrs to build a new portable OS with Compilers, Games, and
+                                    Softwares using 8086 Assembly.</li>
+                                <li>Authored 2 research papers on OS Development using Assembly.</li>
+                                <li>Features: Bootloader, GUI, ASM/C Compiler support, Games, Audio/Mouse/Keyboard
+                                    drivers.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Intervew Management</div> <span class="project-tech">- React JS, Next
+                            JS, Mongo</span>
+                        <div class="project-desc">
+                            Application to manage Jobs, Candidates and set up online video interviews with
+                            inbuilt-feedback system.
+                            <ul>
+                                <li>Role: Project Leader. Quick start up with JIRA project planning.</li>
+                                <li>Integrated Video calling, chatting features for the interview.</li>
+                                <li>Reused existing React ES6 code base to get started in UI, API and Mailing features.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Charity & Donations Management</div> <span class="project-tech">-
+                            React JS, NextJS, MongoDB</span>
+                        <div class="project-desc">
+                            Multi-layered full stack webapp to create and manage US donation pages.
+                            <ul>
+                                <li>Role: Full Stack Development using Node API.</li>
+                                <li>Created using latest ES6 features and DOM Testing with Jest.</li>
+                                <li>Converted to Material UI + CSS3 design from Adobe XD.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Cricket Fantasy App</div> <span class="project-tech">- JS, Android,
+                            Webpack</span>
+                        <div class="project-desc">
+                            <ul>
+                                <li>App Development with 10k+ lines of code and 50+ pages. Payment Management with 3
+                                    types of in-app currencies.</li>
+                                <li>Enterprise Grade Admin to manage Reporting, API load and Server controls.</li>
+                                <li>Automated testing for Pages, Monetary Changes, API loads and Business Logic.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Delhi World</div> <span class="project-tech">- React JS, MongoDB,
+                            Android</span>
+                        <div class="project-desc">
+                            Complete Wholesale Retailer solution with Chat, Payments, and Inventory Management.
+                            Step-wise User access: Owner > Wholesale Buyer > Retailer > Customer.
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Doctor Medical slip Software</div> <span class="project-tech">- JS,
+                            PHP, MySQL</span>
+                        <div class="project-desc">
+                            Designed software for Doctors to rapidly create printed slips with history, symptoms and lab
+                            tests. Included Hospital Management tools for specific Roles.
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Additional Projects</h3>
+                    <ul class="compact-list">
+                        <li><strong>Boutique Retail Website:</strong> Store / Delivery Retail with administration of
+                            appointments, customer/order management (React, Redux, Node).</li>
+                        <li><strong>Coaching Center Management:</strong> Attendance, Online Test, QA, Discussion forums,
+                            Parent app (PHP, MySQL).</li>
+                        <li><strong>Councilman André L. Spivey:</strong> Election Promotion Android App for Detroit City
+                            Councilman.</li>
+                        <li><strong>Sandeep Khurana Music Maestro:</strong> Music & Meditation Android App.</li>
+                        <li><strong>Jai Vijay Book Centre:</strong> Hybrid Android App for Job Search and Book sales.
+                        </li>
+                        <li><strong>Eco Pro Cleaning:</strong> PHP site with Cleaner Log, Services, Blog, Admin,
+                            Invoices.</li>
+                        <li><strong>Site Development & UI/UX:</strong> Sanjeev Kapoor, Peppinos Pizzeria, SoulXSlayer
+                            Portfolio, Leonardo Callie, Evian Cafun.</li>
+                        <li><strong>Dictionary Chrome Extension:</strong> Shows internal jargon meaning from enterprise
+                            dictionary.</li>
+                        <li><strong>TV Tub Android App:</strong> Video edits for Indian TV Drama Serials (10k+
+                            downloads).</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="sidebar-column">
+                <section class="sidebar-section">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">MERN Stack</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Postgres SQL</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">HTML5 & CSS3</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">AI Tools (Copilot, Gemini)</span>
+                    </div>
+                </section>
+
+                <section class="sidebar-section">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="degree">B. Tech.</div>
+                        <div class="company">JIET, Jodhpur</div>
+                        <div class="date">2011 - 2015</div>
+                        <p class="sidebar-text" style="font-size: 0.85rem; margin-top: 0.25rem;">
+                            Taught multiple coding workshops. Participated in hackathons. Created Aplaun OS and
+                            published research papers on Assembly Language OS Dev.
+                        </p>
+                    </div>
+                    <div class="education-item">
+                        <div class="degree">Android Dev. Course</div>
+                        <div class="company">WS Cube Infotech</div>
+                        <div class="date">2014</div>
+                        <p class="sidebar-text" style="font-size: 0.85rem; margin-top: 0.25rem;">
+                            Led a team of 6 to create Android Apps - BMI Calculator, Notes Taking Cloud App, Book
+                            Sharing.
+                        </p>
+                    </div>
+                    <div class="education-item">
+                        <div class="degree">Android Java Trainee</div>
+                        <div class="company">HCL CDC, Jodhpur</div>
+                        <div class="date">2014</div>
+                    </div>
+                </section>
+
+                <section class="sidebar-section">
+                    <h3>Contact</h3>
+                    <div class="contact-details" style="text-align: left; align-items: flex-start;">
+                        <a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a>
+                        <a href="tel:+918890055140">(+91) 88900 55140</a>
+                        <span style="justify-content: flex-start;">Jodhpur, Rajasthan</span>
+                    </div>
+                </section>
+            </aside>
+        </main>
+    </div>
 
 </body>
 
