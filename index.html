@@ -165,18 +165,7 @@
             }
         }
 
-        main {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-        }
 
-        /* For ATS / linear reading, ensure main content appears first in DOM order (it already does) and simplify layout for narrow screens */
-        @media (max-width: 980px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-        }
 
         section {
             margin-bottom: 2.5rem;
@@ -319,7 +308,7 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1rem;
         }
 
@@ -358,10 +347,7 @@
                 padding: 1.5rem;
             }
 
-            main {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+
 
             header {
                 flex-direction: column;
@@ -386,6 +372,41 @@
         @page {
             margin: 1cm;
         }
+
+        .top-nav {
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            background: #eff6ff;
+            border-radius: 8px;
+            justify-content: center;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .top-nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .top-nav a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        @media print {
+            .top-nav {
+                display: none;
+            }
+        }
     </style>
     <script type="application/ld+json">
         {
@@ -396,7 +417,7 @@
             "jobTitle": "Sr. Software Engineer",
             "sameAs": ["https://www.linkedin.com/in/divyavrat/","https://github.com/divyavrat/"],
             "address": { "@type": "PostalAddress", "addressLocality": "Jodhpur", "addressRegion": "Rajasthan", "addressCountry": "India" },
-            "knowsAbout": ["React","Redux","Node.js","Express","MongoDB","Postgres","REST APIs","CI/CD","Docker","Testing","React Native","Expo","PHP"]
+            "knowsAbout": ["AI","React","Redux","Node.js","Express","MongoDB","Postgres","REST APIs","CI/CD","Docker","Testing","React Native","Expo","PHP"]
         }
         </script>
 </head>
@@ -411,7 +432,7 @@
                 <p style="max-width: 600px; color: var(--text-light); margin-top: 0.5rem;">
                     Sr. Software Engineer with 10+ years of experience leading teams and delivering over 100 projects
                     for US and international clients. Expert in the MERN stack (React.js, Express, MongoDB) and
-                    leveraging AI first tools (ChatGPT, Github Copilot, Gemini, Claude) for efficient full-stack
+                    leveraging AI tools (ChatGPT, Gemini, Claude) for efficient full-stack
                     development, prototyping, and code review.
                 </p>
             </div>
@@ -429,547 +450,560 @@
 
         <!-- ATS keywords (visually hidden but parseable) -->
         <div class="visually-hidden" aria-hidden="false">
-            React, Redux, Node.js, Express, MongoDB, Postgres, REST API, GraphQL, CI/CD, Docker, Jest, Unit Testing,
+            AI, React, Redux, Node.js, Express, MongoDB, Postgres, REST API, GraphQL, CI/CD, Docker, Jest, Unit Testing,
             Integration Testing, React Native, Expo, PHP, MySQL, SEO
         </div>
 
+        <nav class="top-nav">
+            <a href="#experience">Experience</a>
+            <a href="#recommendations">Recommendations</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
         <main>
-            <div class="main-column">
-                <section>
-                    <h3>Work Experience</h3>
 
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Sr. Product Engineer – React</div>
-                                <div class="company">Utility Tech Product MNC</div>
-                            </div>
-                            <div class="date">2023 - present</div>
-                        </div>
-                        <p class="visually-hidden">Sr. Product Engineer – React — Utility Tech Product MNC — 2023 -
-                            present</p>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Multiple team projects in the Utility sector for US, Australia, Canada and Asian
-                                    clients.</li>
-                                <li>Training new interns to work on existing codebase</li>
-                                <li>New implementations of old features like Usage Graphs & Charts</li>
-                                <li>AI use to boost productivity for code completion, reviews, debugging, documentations
-                                    and task management using Github Copilot, Chat GPT, Claude, Gemini CLI</li>
-                            </ul>
-                            <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, Postgres SQL
-                            </div>
-                        </div>
-                    </div>
+            <section id="experience">
+                <h3>Work Experience</h3>
 
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Project Manager</div>
-                                <div class="company">Nuvento Pvt Ltd. - Sheer Analytics</div>
-                            </div>
-                            <div class="date">2021 - 2023</div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Sr. Product Engineer – React</div>
+                            <div class="company">Utility Tech Product MNC</div>
                         </div>
-                        <p class="visually-hidden">Project Manager — Nuvento Pvt Ltd. - Sheer Analytics — 2021 - 2023
-                        </p>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Intern training and talent acquisition taking 200+ technical coding rounds and
-                                    interviews</li>
-                                <li>Managed multiple cross functional teams in large scale projects in Retail and
-                                    Utility sectors</li>
-                                <li>Spearheaded implementations of new features and modules</li>
-                                <li>Code refactoring, code-reviews for Industry standards</li>
-                            </ul>
-                            <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, HTML5, CSS3, PHP
-                            </div>
+                        <div class="date">2023 - present</div>
+                    </div>
+                    <p class="visually-hidden">Sr. Product Engineer – React — Utility Tech Product MNC — 2023 -
+                        present</p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Multiple team projects in the Utility sector for US, Australia, Canada and Asian
+                                clients.</li>
+                            <li>Training new interns to work on existing codebase</li>
+                            <li>New implementations of old features like Usage Graphs & Charts</li>
+                            <li>AI use to boost productivity for code completion, reviews, debugging, documentations
+                                and task management using Github Copilot, Chat GPT, Claude, Gemini CLI</li>
+                        </ul>
+                        <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, Postgres SQL
                         </div>
                     </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Tech lead</div>
-                                <div class="company">Consultancy Contract</div>
-                            </div>
-                            <div class="date">2020</div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Project Manager</div>
+                            <div class="company">Nuvento Pvt Ltd. - Sheer Analytics</div>
                         </div>
-                        <p class="visually-hidden">Tech lead — Consultancy Contract — 2020</p>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Developed an entire web portal for student online learning and exam</li>
-                                <li>Created accounting reports and Payment gateway for fee submission</li>
-                                <li>Created Android App for Student Training. RnD, Development and Testing</li>
-                                <li>Daily stakeholder meetings for effective transformation of requirements to technical
-                                    solutions</li>
-                                <li>Long term Project Support provided with timely resolutions</li>
-                                <li><a href="https://play.google.com/store/apps/details?id=com.divyavrat.rpm">Learn CPR
-                                        App on Play Store</a></li>
-                            </ul>
-                            <div class="tech-stack"><strong>Tech Stack:</strong> Core PHP, Android Java, Expo React
-                                Native</div>
+                        <div class="date">2021 - 2023</div>
+                    </div>
+                    <p class="visually-hidden">Project Manager — Nuvento Pvt Ltd. - Sheer Analytics — 2021 - 2023
+                    </p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Intern training and talent acquisition taking 200+ technical coding rounds and
+                                interviews</li>
+                            <li>Managed multiple cross functional teams in large scale projects in Retail and
+                                Utility sectors</li>
+                            <li>Spearheaded implementations of new features and modules</li>
+                            <li>Code refactoring, code-reviews for Industry standards</li>
+                        </ul>
+                        <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, HTML5, CSS3, PHP
                         </div>
                     </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Sr. Software Engineer</div>
-                                <div class="company">Sarga Technologies, Jodhpur</div>
-                            </div>
-                            <div class="date">2019</div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Tech lead</div>
+                            <div class="company">Consultancy Contract</div>
                         </div>
-                        <p class="visually-hidden">Sr. Software Engineer — Sarga Technologies, Jodhpur — 2019</p>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Developed React Js Web applications, React Native Apps</li>
-                                <li>Created designs from Zeplin and Sketch files to React</li>
-                                <li>Worked with Clients to fulfill User workflow Stories</li>
-                                <li>Created Enterprise Level management Webapps in React</li>
-                                <li>Recreated Static Website in React Js from Laravel</li>
-                                <li>Improved UI Designs for 3 websites in Laravel and React</li>
-                            </ul>
-                        </div>
+                        <div class="date">2020</div>
                     </div>
+                    <p class="visually-hidden">Tech lead — Consultancy Contract — 2020</p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Developed an entire web portal for student online learning and exam</li>
+                            <li>Created accounting reports and Payment gateway for fee submission</li>
+                            <li>Created Android App for Student Training. RnD, Development and Testing</li>
+                            <li>Daily stakeholder meetings for effective transformation of requirements to technical
+                                solutions</li>
+                            <li>Long term Project Support provided with timely resolutions</li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.divyavrat.rpm">Learn CPR
+                                    App on Play Store</a></li>
+                        </ul>
+                        <div class="tech-stack"><strong>Tech Stack:</strong> Core PHP, Android Java, Expo React
+                            Native</div>
+                    </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Full Stack Developer</div>
-                                <div class="company">Freelance Contracts</div>
-                            </div>
-                            <div class="date">2016 - 2018</div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Sr. Software Engineer</div>
+                            <div class="company">Sarga Technologies, Jodhpur</div>
                         </div>
-                        <p class="visually-hidden">Full Stack Developer — Freelance Contracts — 2016 - 2018</p>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Worked with multiple international clients and stakeholders on business
-                                    requirements, user flows, Price / Timeline negotiations, deliverables, Maintenance
-                                    with impeccable record of client satisfaction.</li>
-                                <li>Delivered 100+ projects in major technologies and platforms - native / hybrid
-                                    Android apps, core PHP websites, React apps</li>
-                                <li>Continuous improvement and maintenance of multiple projects with 10lk+ users and
-                                    real-time traffic.</li>
-                            </ul>
-                        </div>
+                        <div class="date">2019</div>
                     </div>
+                    <p class="visually-hidden">Sr. Software Engineer — Sarga Technologies, Jodhpur — 2019</p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Developed React Js Web applications, React Native Apps</li>
+                            <li>Created designs from Zeplin and Sketch files to React</li>
+                            <li>Worked with Clients to fulfill User workflow Stories</li>
+                            <li>Created Enterprise Level management Webapps in React</li>
+                            <li>Recreated Static Website in React Js from Laravel</li>
+                            <li>Improved UI Designs for 3 websites in Laravel and React</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Web Developer</div>
-                                <div class="company">Ashapura Infocom, Jodhpur</div>
-                            </div>
-                            <div class="date">2015</div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Full Stack Developer</div>
+                            <div class="company">Freelance Contracts</div>
                         </div>
-                        <p class="visually-hidden">Web Developer — Ashapura Infocom, Jodhpur — 2015</p>
-                        <div class="job-desc">
-                            <ul>
-                                <li>In a group of 3, led the team to rapidly create 2 Websites</li>
-                                <li>Single Handed worked on initial build phase of Jewellery Shop Software in Java Swing
-                                </li>
-                            </ul>
-                        </div>
+                        <div class="date">2016 - 2018</div>
                     </div>
-                </section>
+                    <p class="visually-hidden">Full Stack Developer — Freelance Contracts — 2016 - 2018</p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>Worked with multiple international clients and stakeholders on business
+                                requirements, user flows, Price / Timeline negotiations, deliverables, Maintenance
+                                with impeccable record of client satisfaction.</li>
+                            <li>Delivered 100+ projects in major technologies and platforms - native / hybrid
+                                Android apps, core PHP websites, React apps</li>
+                            <li>Continuous improvement and maintenance of multiple projects with 10lk+ users and
+                                real-time traffic.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <section>
-                    <h3>Recommendations</h3>
-                    <div class="testimonial-item">
-                        <p>"Divyavrat Jugtawat is a key team member in Cleco project. Divyavrat has scaled himself up
-                            really well and picked up the most complex modules i.e. Outage and Usage in Cleco R3
-                            delivery. Divyavrat understood the requirements very well and helped in delivering these
-                            complex modules with highest quality. Divyavrat is approachable whenever required and has
-                            always stretched his limits to meet the project level objectives & timelines. I strongly
-                            feel Divyavrat is an asset for SEW and would like to appreciate him for the efforts,
-                            dedication, and hard work that he has put in Cleco project."</p>
-                        <div class="testimonial-author">- Director, Product Delivery SEW.ai</div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Web Developer</div>
+                            <div class="company">Ashapura Infocom, Jodhpur</div>
+                        </div>
+                        <div class="date">2015</div>
                     </div>
-                    <div class="testimonial-item">
-                        <p>"Divyavrat is a great developer to work with. Always on time. Work is always professional and
-                            correct. He is willing to make changes to make the customer happy. Divyavrat was a pleasure
-                            to work with. Nothing was a problem. He definitely understands coding very well and
-                            recommend him any day. Looking forward to work together again soon. Although my work was
-                            very complex, he delivered a great work and changed it until it met all my needs."</p>
-                        <div class="testimonial-author">- D (US Client)</div>
+                    <p class="visually-hidden">Web Developer — Ashapura Infocom, Jodhpur — 2015</p>
+                    <div class="job-desc">
+                        <ul>
+                            <li>In a group of 3, led the team to rapidly create 2 Websites</li>
+                            <li>Single Handed worked on initial build phase of Jewellery Shop Software in Java Swing
+                            </li>
+                        </ul>
                     </div>
-                    <div class="testimonial-item">
-                        <p>"Divyavrat provides an outstanding service. He met my criteria for the Firefox extension that
-                            I needed programmed and worked with me when ever I needed something changed. I'm very happy
-                            with the work he has produced and highly recommend him as a skilled programmer. Always
-                            fantastic work and very prompt! Great communication and takes the time to ensure things are
-                            exactly as I want. Thank you!"</p>
-                        <div class="testimonial-author">- H (US Client)</div>
-                    </div>
-                    <div class="testimonial-item">
-                        <p>"Divyavrat is one of the best people I have ever had the pleasure of working with in all of
-                            time. He is very professional and responsible. I asked him to fix some things several times,
-                            some were things I had not told him before, and he did everything I asked him. I will
-                            definitely love to work with him again."</p>
-                        <div class="testimonial-author">- Ed (US Client)</div>
-                    </div>
-                </section>
+                </div>
+            </section>
 
-                <section>
-                    <h3>Key Projects</h3>
+            <section id="recommendations">
+                <h3>Recommendations</h3>
+                <div class="testimonial-item">
+                    <p>"Divyavrat Jugtawat is a key team member in Cleco project. Divyavrat has scaled himself up
+                        really well and picked up the most complex modules i.e. Outage and Usage in Cleco R3
+                        delivery. Divyavrat understood the requirements very well and helped in delivering these
+                        complex modules with highest quality. Divyavrat is approachable whenever required and has
+                        always stretched his limits to meet the project level objectives & timelines. I strongly
+                        feel Divyavrat is an asset for SEW and would like to appreciate him for the efforts,
+                        dedication, and hard work that he has put in Cleco project."</p>
+                    <div class="testimonial-author">- Director, Product Delivery SEW.ai</div>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Divyavrat is a great developer to work with. Always on time. Work is always professional and
+                        correct. He is willing to make changes to make the customer happy. Divyavrat was a pleasure
+                        to work with. Nothing was a problem. He definitely understands coding very well and
+                        recommend him any day. Looking forward to work together again soon. Although my work was
+                        very complex, he delivered a great work and changed it until it met all my needs."</p>
+                    <div class="testimonial-author">- D (US Client)</div>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Divyavrat provides an outstanding service. He met my criteria for the Firefox extension that
+                        I needed programmed and worked with me when ever I needed something changed. I'm very happy
+                        with the work he has produced and highly recommend him as a skilled programmer. Always
+                        fantastic work and very prompt! Great communication and takes the time to ensure things are
+                        exactly as I want. Thank you!"</p>
+                    <div class="testimonial-author">- H (US Client)</div>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Divyavrat is one of the best people I have ever had the pleasure of working with in all of
+                        time. He is very professional and responsible. I asked him to fix some things several times,
+                        some were things I had not told him before, and he did everything I asked him. I will
+                        definitely love to work with him again."</p>
+                    <div class="testimonial-author">- Ed (US Client)</div>
+                </div>
+            </section>
 
-                    <div class="project-item">
-                        <div class="project-title"><a href="https://github.com/Divyavrat/aplaun" target="_blank"
-                                rel="noopener">Aplaun OS</a></div> <span class="project-tech">- Assembly 8086</span>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Initiated and worked 2yrs to build a new portable OS with Compilers, Games, and
-                                    Softwares with JIET MTech Dept using 8086 Assembly language.</li>
-                                <li>Authored 2 research papers on OS Development using Assembly. <a
-                                        href="https://www.ijert.org/overview-of-architecture-and-application-of-clone-os"
-                                        target="_blank" rel="noopener">Read papers</a></li>
-                                <li>Took student workshops to teach OS Development.</li>
-                                <li>Features: Bootloader, GUI, ASM/C Compiler support, Games, Audio/Mouse/Keyboard
-                                    drivers.</li>
-                            </ul>
-                            <p style="margin-top:0.5rem; font-size:0.95rem;">Repository: <a
-                                    href="https://github.com/Divyavrat/aplaun" target="_blank"
-                                    rel="noopener">github.com/Divyavrat/aplaun</a></p>
-                        </div>
-                    </div>
+            <section id="education">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="degree">B. Tech.</div>
+                    <div class="company">JIET, Jodhpur</div>
+                    <div class="date">2011 - 2015</div>
+                    <p style="font-size: 0.95rem; margin-top: 0.25rem;">
+                        Taught multiple coding workshops. Participated in hackathons and college level competitions.
+                        Attended a coding lab alongside M.Tech. Students for final year. Created Aplaun OS and
+                        published research papers on Assembly Language OS Dev.
+                    </p>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Android Dev. Course</div>
+                    <div class="company">WS Cube Infotech</div>
+                    <div class="date">2014</div>
+                    <p style="font-size: 0.95rem; margin-top: 0.25rem;">
+                        Led a team of 6 to create Android Apps - BMI Calculator, Notes Taking Cloud App, Book
+                        Sharing.
+                    </p>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Android Java Trainee</div>
+                    <div class="company">HCL CDC, Jodhpur</div>
+                    <div class="date">2014</div>
+                </div>
+            </section>
 
-                    <div class="project-item">
-                        <div class="project-title">Boutique Retail Website</div> <span class="project-tech">- React,
-                            Redux, Mongo, SQL</span>
-                        <div class="project-desc">
-                            Worked on Store / Delivery Retail with in-store Services
-                            <ul>
-                                <li>Worked in modules related to administration of appointments, customer management,
-                                    order management.</li>
-                                <li>Building Node APIs for new features in development.</li>
-                            </ul>
-                        </div>
-                    </div>
+            <section id="certifications">
+                <h3>Certifications</h3>
+                <ul class="compact-list" style="padding-left: 1.2rem; margin-bottom: 2rem;">
+                    <li>AI - Skill India Course</li>
+                    <li>Secure Coding and VAPT</li>
+                    <li>SEW Product Delivery Methodology</li>
+                    <li>Security Awareness Training</li>
+                    <li>SAP Overview</li>
+                    <li>Enterprise Systems - SAP and Oracle</li>
+                </ul>
+            </section>
 
-                    <div class="project-item">
-                        <div class="project-title">Interview Management</div> <span class="project-tech">- React JS,
-                            Next JS, Mongo, CSS3</span>
-                        <div class="project-desc">
-                            Application to manage Jobs, Candidates and set up online video interviews. Inbuilt-feedback
-                            system.
-                            <ul>
-                                <li>Role: Project Leader</li>
-                                <li>Quick start up with JIRA project planning</li>
-                                <li>Reuse existing React ES6 code base to get started in UI, API and Mailing features
-                                </li>
-                                <li>Design created in Adobe XD. Converted to HTML5, CSS3.</li>
-                                <li>Integrated Video calling, chatting features for the interview.</li>
-                            </ul>
-                        </div>
-                    </div>
+            <section id="skills">
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">AI tools (ChatGPT, Github Copilot, Gemini, Claude)</span>
+                    <span class="skill-tag">MERN stack (React.js, Express, MongoDB)</span>
+                    <span class="skill-tag">Native + Hybrid Android development (Expo, React Native, Java)</span>
+                    <span class="skill-tag">Core PHP, SQL</span>
+                    <span class="skill-tag">Assembly 8086 OS Dev</span>
+                </div>
+            </section>
 
-                    <div class="project-item">
-                        <div class="project-title">Charity & Donations Management</div> <span class="project-tech">-
-                            React JS, NextJS, MongoDB</span>
-                        <div class="project-desc">
-                            Multi-layered full stack webapp to create and manage US donation pages.
-                            <ul>
-                                <li>Role: Full Stack Development using Node API</li>
-                                <li>Created using latest ES6 features.</li>
-                                <li>DOM Testing with Jest.</li>
-                                <li>Converted to Material UI + CSS3 design from Adobe XD Design provided by UI Designer.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <section id="projects">
+                <h3>Key Projects</h3>
 
-                    <div class="project-item">
-                        <div class="project-title">Delhi World</div> <span class="project-tech">- React JS, tJS,
-                            MongoDB, Android</span>
-                        <div class="project-desc">
-                            Complete Wholesale Retailer solution
-                            <ul>
-                                <li>Step-wise User access - Owner > Wholesale Buyer > Retailer > Customer</li>
-                                <li>In-built chat and payment options.</li>
-                                <li>Inventory Management</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title"><a href="https://github.com/Divyavrat/aplaun" target="_blank"
+                            rel="noopener">Aplaun OS</a></div> <span class="project-tech">- Assembly 8086</span>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Initiated and worked 2yrs to build a new portable OS with Compilers, Games, and
+                                Softwares with JIET MTech Dept using 8086 Assembly language.</li>
+                            <li>Authored 2 research papers on OS Development using Assembly. <a
+                                    href="https://www.ijert.org/overview-of-architecture-and-application-of-clone-os"
+                                    target="_blank" rel="noopener">Read papers</a></li>
+                            <li>Took student workshops to teach OS Development.</li>
+                            <li>Features: Bootloader, GUI, ASM/C Compiler support, Games, Audio/Mouse/Keyboard
+                                drivers.</li>
+                        </ul>
+                        <p style="margin-top:0.5rem; font-size:0.95rem;">Repository: <a
+                                href="https://github.com/Divyavrat/aplaun" target="_blank"
+                                rel="noopener">github.com/Divyavrat/aplaun</a></p>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Cricket Fantasy App</div> <span class="project-tech">- js, Android,
-                            Webpack build script</span>
-                        <div class="project-desc">
-                            Created the entire app for initial release between 2018-2019, Second version released in
-                            2021.
-                            <ul>
-                                <li>Role: Full Stack Development and Project Tech Lead</li>
-                                <li>App Development with more than 10k+ lines of code and 50+ pages.</li>
-                                <li>Payment Management with 3 types of in-app currencies.</li>
-                                <li>Enterprise Grade Admin to manage Reporting, API load and Server controls.</li>
-                                <li>Automatic Management Scripts to Handle Match Cancellations, Prizes</li>
-                                <li>Automated testing for Pages, Monetary Changes, API loads and Business Logic.</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Boutique Retail Website</div> <span class="project-tech">- React,
+                        Redux, Mongo, SQL</span>
+                    <div class="project-desc">
+                        Worked on Store / Delivery Retail with in-store Services
+                        <ul>
+                            <li>Worked in modules related to administration of appointments, customer management,
+                                order management.</li>
+                            <li>Building Node APIs for new features in development.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Doctor Medical slip Software</div> <span class="project-tech">- js,
-                            PHP, MySQL</span>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Role: Full Stack Development and Project Tech Lead</li>
-                                <li>Met with Hospital Chief of Medicine and Resident Doctors to discuss technological
-                                    solutions to their tedious workflow.</li>
-                                <li>Designed new Doctor Medical Slip Software for Doctors to rapidly create slips and
-                                    printed out with history, symptoms and lab tests to avoid doctor’s handwritten
-                                    slips.</li>
-                                <li>Hospital Management Tools for various Roles to handle Reports, Accounting and Old
-                                    Patient Records.</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Interview Management</div> <span class="project-tech">- React JS,
+                        Next JS, Mongo, CSS3</span>
+                    <div class="project-desc">
+                        Application to manage Jobs, Candidates and set up online video interviews. Inbuilt-feedback
+                        system.
+                        <ul>
+                            <li>Role: Project Leader</li>
+                            <li>Quick start up with JIRA project planning</li>
+                            <li>Reuse existing React ES6 code base to get started in UI, API and Mailing features
+                            </li>
+                            <li>Design created in Adobe XD. Converted to HTML5, CSS3.</li>
+                            <li>Integrated Video calling, chatting features for the interview.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Coaching Center Management</div> <span class="project-tech">- PHP,
-                            MySQL</span>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Role: Full Stack Development and Project Tech Lead</li>
-                                <li>Fast, Responsive, SEO-friendly and Dynamic Landing Page with modern design elements.
-                                </li>
-                                <li>Student Attendance, Online Test, QA with teachers, Time tables / Notes tools,
-                                    Discussion forums.</li>
-                                <li>Anonymous teacher and staff rating system.</li>
-                                <li>Parent app and notifications for missed classes.</li>
-                                <li>Administration Tools to manage content and reporting.</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Charity & Donations Management</div> <span class="project-tech">-
+                        React JS, NextJS, MongoDB</span>
+                    <div class="project-desc">
+                        Multi-layered full stack webapp to create and manage US donation pages.
+                        <ul>
+                            <li>Role: Full Stack Development using Node API</li>
+                            <li>Created using latest ES6 features.</li>
+                            <li>DOM Testing with Jest.</li>
+                            <li>Converted to Material UI + CSS3 design from Adobe XD Design provided by UI Designer.
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title"><a href="https://www.jietjodhpur.ac.in/" target="_blank"
-                                rel="noopener">JIET College Landing Page and Management Webapps</a></div> <span
-                            class="project-tech">- HTML,CSS,PHP, MySQL</span>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Managed a team of 8 students to create a College Website from scratch.</li>
-                                <li>Divided work on various modules like Fees submissions, Form filling, Exam
-                                    notifications.</li>
-                                <li>Created Main Landing pages, content working with HOD and College Director.</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Delhi World</div> <span class="project-tech">- React JS, tJS,
+                        MongoDB, Android</span>
+                    <div class="project-desc">
+                        Complete Wholesale Retailer solution
+                        <ul>
+                            <li>Step-wise User access - Owner > Wholesale Buyer > Retailer > Customer</li>
+                            <li>In-built chat and payment options.</li>
+                            <li>Inventory Management</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Councilman André L. Spivey</div> <span class="project-tech">-
-                            Android, PhoneGap</span>
-                        <div class="project-desc">
-                            Election Promotion App for Councilman from Detroit, Michigan, United States City Council
-                            having first been elected citywide in November of 2009. He was re-elected in 2013 and 2017.
-                            <ul>
-                                <li>Role: Consultant Android Developer</li>
-                                <li>Added Publicity Material to support upcoming elections.</li>
-                                <li>Website - App content synchronization.</li>
-                                <li>Developed Screens for - About, Calendar, Crime Reports and News</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Cricket Fantasy App</div> <span class="project-tech">- js, Android,
+                        Webpack build script</span>
+                    <div class="project-desc">
+                        Created the entire app for initial release between 2018-2019, Second version released in
+                        2021.
+                        <ul>
+                            <li>Role: Full Stack Development and Project Tech Lead</li>
+                            <li>App Development with more than 10k+ lines of code and 50+ pages.</li>
+                            <li>Payment Management with 3 types of in-app currencies.</li>
+                            <li>Enterprise Grade Admin to manage Reporting, API load and Server controls.</li>
+                            <li>Automatic Management Scripts to Handle Match Cancellations, Prizes</li>
+                            <li>Automated testing for Pages, Monetary Changes, API loads and Business Logic.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Sandeep Khurana Music Maestro</div> <span class="project-tech">-
-                            Android, PhoneGap</span>
-                        <div class="project-desc">
-                            Music & Meditation app showcasing 20 tracks of all genres from the US based music composer
-                            and film-maker.
-                            <ul>
-                                <li>Role: Android App Developer</li>
-                                <li>Design and Development for Relaxing Sounds Infinite app and Music Harmony app</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Doctor Medical slip Software</div> <span class="project-tech">- js,
+                        PHP, MySQL</span>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Role: Full Stack Development and Project Tech Lead</li>
+                            <li>Met with Hospital Chief of Medicine and Resident Doctors to discuss technological
+                                solutions to their tedious workflow.</li>
+                            <li>Designed new Doctor Medical Slip Software for Doctors to rapidly create slips and
+                                printed out with history, symptoms and lab tests to avoid doctor’s handwritten
+                                slips.</li>
+                            <li>Hospital Management Tools for various Roles to handle Reports, Accounting and Old
+                                Patient Records.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title"><a
-                                href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
-                                target="_blank" rel="noopener">Jai Vijay Book Centre</a></div> <span
-                            class="project-tech">- Hybrid Android Java, JS</span>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Features for Job Search and Book sale, Buy Books in-app.</li>
-                                <li>Web Admin to manage App’s content and advertising banners</li>
-                                <li>Rapid App Development for all client requirements</li>
-                                <li><a href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
-                                        target="_blank" rel="noopener">Play Store link</a> , <a
-                                        href="http://www.jaivijaybookcentre.com/" target="_blank"
-                                        rel="noopener">Website</a></li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Coaching Center Management</div> <span class="project-tech">- PHP,
+                        MySQL</span>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Role: Full Stack Development and Project Tech Lead</li>
+                            <li>Fast, Responsive, SEO-friendly and Dynamic Landing Page with modern design elements.
+                            </li>
+                            <li>Student Attendance, Online Test, QA with teachers, Time tables / Notes tools,
+                                Discussion forums.</li>
+                            <li>Anonymous teacher and staff rating system.</li>
+                            <li>Parent app and notifications for missed classes.</li>
+                            <li>Administration Tools to manage content and reporting.</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="project-item">
-                        <div class="project-title">Site Development and UI Design for -</div>
-                        <div class="project-desc">
-                            <ul>
-                                <li>Sanjeev Kapoor- Website for the Indian Master Chef’s Canadian Restaurant Chain.</li>
-                                <li>Peppinos Pizzeria Website- HTML5, CSS3</li>
-                                <li>Portfolio for Graphic Designer and 3D artist SoulXSlayer- HTML5, CSS3</li>
-                                <li>Leonardo Callie Portfolio - Greek Graphic Designer</li>
-                                <li>Website for DJ Artist Evian Cafun- PHP, HTML5, CSS3</li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title"><a href="https://www.jietjodhpur.ac.in/" target="_blank"
+                            rel="noopener">JIET College Landing Page and Management Webapps</a></div> <span
+                        class="project-tech">- HTML,CSS,PHP, MySQL</span>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Managed a team of 8 students to create a College Website from scratch.</li>
+                            <li>Divided work on various modules like Fees submissions, Form filling, Exam
+                                notifications.</li>
+                            <li>Created Main Landing pages, content working with HOD and College Director.</li>
+                        </ul>
                     </div>
-                </section>
+                </div>
 
-                <section>
-                    <h3>Additional Projects</h3>
-                    <div class="project-item">
-                        <div class="project-desc">
-                            <ul>
-                                <li><strong>Eco Pro Cleaning</strong> - PHP site with Cleaner Log, Services, Blog,
-                                    Admin, Login, Appointment, Invoices.</li>
-                                <li><strong>Asmin Khatoon - Unique Home Care</strong> - static site design and
-                                    deployment.</li>
-                                <li><strong>SRA Website</strong> - MERN site and Adobe XD UI design with modules like
-                                    Login and Pricing.</li>
-                                <li><strong>Patitva Matrimony Site</strong> - React UI built from Zeplin design.</li>
-                                <li><strong>Event Management Android App</strong> - built with a JIET student team.</li>
-                                <li><strong>File Sharing App</strong> - centralised server with multiple user roles.
-                                </li>
-                                <li><strong>Dictionary Chrome Extension</strong> - shows internal jargon meanings from
-                                    enterprise dictionary file.</li>
-                                <li><strong>Offers & Coupon Management</strong> - competitor to Grabon and Coupdunia.
-                                </li>
-                                <li><strong>TV Tub Android App</strong> - fan-made wallpapers and video edits for Indian
-                                    TV serials.</li>
-                                <li><strong>E-Invitation</strong> - static websites for private weddings.</li>
-                                <li><strong>Haptik Chrome Plugin</strong> - assistants with radio FM, games, wallpapers,
-                                    inbuilt google search.</li>
-                                <li><strong>Pushkarna Brahman Online Family Tree</strong> - Core PHP site with node
-                                    search.</li>
-                                <li><strong>E-Learning Hybridskill Training</strong> - site in React for training and
-                                    courses.</li>
-                                <li><strong>Donation Site</strong> - built for non-profit GlobalMindED.</li>
-                                <li><strong>Australia Rentals Portal</strong> - React-based rental listing platform.
-                                </li>
-                                <li><strong>Jai Vijay Book Centre</strong> - Hybrid Android app. Play Store: <a
-                                        href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
-                                        target="_blank" rel="noopener">Play Store</a>, Website: <a
-                                        href="http://www.jaivijaybookcentre.com/" target="_blank"
-                                        rel="noopener">jaivijaybookcentre.com</a></li>
-                            </ul>
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Councilman André L. Spivey</div> <span class="project-tech">-
+                        Android, PhoneGap</span>
+                    <div class="project-desc">
+                        Election Promotion App for Councilman from Detroit, Michigan, United States City Council
+                        having first been elected citywide in November of 2009. He was re-elected in 2013 and 2017.
+                        <ul>
+                            <li>Role: Consultant Android Developer</li>
+                            <li>Added Publicity Material to support upcoming elections.</li>
+                            <li>Website - App content synchronization.</li>
+                            <li>Developed Screens for - About, Calendar, Crime Reports and News</li>
+                        </ul>
                     </div>
-                </section>
+                </div>
 
-                <section>
-                    <h3>Portfolio</h3>
-                    <div class="portfolio-grid">
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/interview 2.png" alt="interview 2" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/interview.png" alt="interview" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/3d soulxslayer portfolio.jpg" alt="3d soulxslayer portfolio"
-                                loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/leo portfolio.jpg" alt="leo portfolio" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/music.png" alt="music" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/pizza portfolio.jpg" alt="pizza portfolio" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/color prediction app 2 long.jpg" alt="color prediction app 2 long"
-                                loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/cricket prediction app long.jpg" alt="cricket prediction app long"
-                                loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/bookstore app.jpg" alt="bookstore app" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/cloneos.png" alt="cloneos" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/dj evian portfolio.jpg" alt="dj evian portfolio" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/music db.JPG" alt="music db" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/sandeep music.jpg" alt="sandeep music" loading="lazy">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="img/portfolio/leo portfolio long.jpg" alt="leo portfolio long" loading="lazy">
-                        </div>
+                <div class="project-item">
+                    <div class="project-title">Sandeep Khurana Music Maestro</div> <span class="project-tech">-
+                        Android, PhoneGap</span>
+                    <div class="project-desc">
+                        Music & Meditation app showcasing 20 tracks of all genres from the US based music composer
+                        and film-maker.
+                        <ul>
+                            <li>Role: Android App Developer</li>
+                            <li>Design and Development for Relaxing Sounds Infinite app and Music Harmony app</li>
+                        </ul>
                     </div>
-                </section>
-            </div>
+                </div>
 
-            <aside class="sidebar-column">
-                <section class="sidebar-section">
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag">MERN stack (React.js, Express, MongoDB)</span>
-                        <span class="skill-tag">Core PHP, SQL</span>
-                        <span class="skill-tag">Native + Hybrid Android development (Expo, React Native, Java)</span>
-                        <span class="skill-tag">Assembly 8086 OS Dev</span>
-                        <span class="skill-tag">AI first tools (ChatGPT, Github Copilot, Gemini, Claude)</span>
+                <div class="project-item">
+                    <div class="project-title"><a
+                            href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
+                            target="_blank" rel="noopener">Jai Vijay Book Centre</a></div> <span class="project-tech">-
+                        Hybrid Android Java, JS</span>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Features for Job Search and Book sale, Buy Books in-app.</li>
+                            <li>Web Admin to manage App’s content and advertising banners</li>
+                            <li>Rapid App Development for all client requirements</li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
+                                    target="_blank" rel="noopener">Play Store link</a> , <a
+                                    href="http://www.jaivijaybookcentre.com/" target="_blank" rel="noopener">Website</a>
+                            </li>
+                        </ul>
                     </div>
-                </section>
+                </div>
 
-                <section class="sidebar-section">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <div class="degree">B. Tech.</div>
-                        <div class="company">JIET, Jodhpur</div>
-                        <div class="date">2011 - 2015</div>
-                        <p class="sidebar-text" style="font-size: 0.85rem; margin-top: 0.25rem;">
-                            Taught multiple coding workshops. Participated in hackathons and college level competitions.
-                            Attended a coding lab alongside M.Tech. Students for final year. Created Aplaun OS and
-                            published research papers on Assembly Language OS Dev.
-                        </p>
+                <div class="project-item">
+                    <div class="project-title">Site Development and UI Design for -</div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Sanjeev Kapoor- Website for the Indian Master Chef’s Canadian Restaurant Chain.</li>
+                            <li>Peppinos Pizzeria Website- HTML5, CSS3</li>
+                            <li>Portfolio for Graphic Designer and 3D artist SoulXSlayer- HTML5, CSS3</li>
+                            <li>Leonardo Callie Portfolio - Greek Graphic Designer</li>
+                            <li>Website for DJ Artist Evian Cafun- PHP, HTML5, CSS3</li>
+                        </ul>
                     </div>
-                    <div class="education-item">
-                        <div class="degree">Android Dev. Course</div>
-                        <div class="company">WS Cube Infotech</div>
-                        <div class="date">2014</div>
-                        <p class="sidebar-text" style="font-size: 0.85rem; margin-top: 0.25rem;">
-                            Led a team of 6 to create Android Apps - BMI Calculator, Notes Taking Cloud App, Book
-                            Sharing.
-                        </p>
-                    </div>
-                    <div class="education-item">
-                        <div class="degree">Android Java Trainee</div>
-                        <div class="company">HCL CDC, Jodhpur</div>
-                        <div class="date">2014</div>
-                    </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="sidebar-section">
-                    <h3>Certifications</h3>
-                    <ul class="compact-list" style="padding-left: 1.2rem;">
-                        <li>AI - Skill India Course</li>
-                        <li>Secure Coding and VAPT</li>
-                        <li>SEW Product Delivery Methodology</li>
-                        <li>Security Awareness Training</li>
-                        <li>SAP Overview</li>
-                        <li>Enterprise Systems - SAP and Oracle</li>
-                    </ul>
-                </section>
-
-                <section class="sidebar-section">
-                    <h3>Contact</h3>
-                    <div class="contact-details" style="text-align: left; align-items: flex-start;">
-                        <a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a>
-                        <a href="tel:+918890055140">(+91) 88900 55140</a>
-                        <span style="justify-content: flex-start;">Jodhpur, Rajasthan</span>
+            <section>
+                <h3>Additional Projects</h3>
+                <div class="project-item">
+                    <div class="project-desc">
+                        <ul>
+                            <li><strong>Eco Pro Cleaning</strong> - PHP site with Cleaner Log, Services, Blog,
+                                Admin, Login, Appointment, Invoices.</li>
+                            <li><strong>Asmin Khatoon - Unique Home Care</strong> - static site design and
+                                deployment.</li>
+                            <li><strong>SRA Website</strong> - MERN site and Adobe XD UI design with modules like
+                                Login and Pricing.</li>
+                            <li><strong>Patitva Matrimony Site</strong> - React UI built from Zeplin design.</li>
+                            <li><strong>Event Management Android App</strong> - built with a JIET student team.</li>
+                            <li><strong>File Sharing App</strong> - centralised server with multiple user roles.
+                            </li>
+                            <li><strong>Dictionary Chrome Extension</strong> - shows internal jargon meanings from
+                                enterprise dictionary file.</li>
+                            <li><strong>Offers & Coupon Management</strong> - competitor to Grabon and Coupdunia.
+                            </li>
+                            <li><strong>TV Tub Android App</strong> - fan-made wallpapers and video edits for Indian
+                                TV serials.</li>
+                            <li><strong>E-Invitation</strong> - static websites for private weddings.</li>
+                            <li><strong>Haptik Chrome Plugin</strong> - assistants with radio FM, games, wallpapers,
+                                inbuilt google search.</li>
+                            <li><strong>Pushkarna Brahman Online Family Tree</strong> - Core PHP site with node
+                                search.</li>
+                            <li><strong>E-Learning Hybridskill Training</strong> - site in React for training and
+                                courses.</li>
+                            <li><strong>Donation Site</strong> - built for non-profit GlobalMindED.</li>
+                            <li><strong>Australia Rentals Portal</strong> - React-based rental listing platform.
+                            </li>
+                            <li><strong>Jai Vijay Book Centre</strong> - Hybrid Android app. Play Store: <a
+                                    href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
+                                    target="_blank" rel="noopener">Play Store</a>, Website: <a
+                                    href="http://www.jaivijaybookcentre.com/" target="_blank"
+                                    rel="noopener">jaivijaybookcentre.com</a></li>
+                        </ul>
                     </div>
-                </section>
-            </aside>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h3>Portfolio</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/interview 2.png" alt="interview 2" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/interview.png" alt="interview" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/3d soulxslayer portfolio.jpg" alt="3d soulxslayer portfolio"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/leo portfolio.jpg" alt="leo portfolio" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/music.png" alt="music" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/pizza portfolio.jpg" alt="pizza portfolio" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/bookstore app.jpg" alt="bookstore app" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/cloneos.png" alt="cloneos" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/dj evian portfolio.jpg" alt="dj evian portfolio" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/music db.JPG" alt="music db" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/sandeep music.jpg" alt="sandeep music" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <br />
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/color prediction app 2 long.jpg" alt="color prediction app 2 long"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/cricket prediction app long.jpg" alt="cricket prediction app long"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/leo portfolio long.jpg" alt="leo portfolio long" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h3>Contact</h3>
+                <div class="contact-details"
+                    style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left; align-items: flex-start;">
+                    <a href="mailto:divyavrat@gmail.com" style="justify-content: flex-start;">divyavrat@gmail.com</a>
+                    <a href="tel:+918890055140" style="justify-content: flex-start;">(+91) 88900 55140</a>
+                    <span style="justify-content: flex-start;">Jodhpur, Rajasthan</span>
+                </div>
+            </section>
+
         </main>
     </div>
 
