@@ -130,7 +130,37 @@
             white-space: nowrap;
         }
 
-        /* Print / PDF tweaks */
+        .profile-cover {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+            display: block;
+        }
+
+        .cover-image-container {
+            margin-left: -3rem;
+            margin-right: -3rem;
+            margin-top: -3rem;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: var(--shadow);
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
         @media print {
             body {
                 background: white;
@@ -157,11 +187,27 @@
             .experience-item {
                 page-break-inside: avoid;
             }
+
+            .cover-image-container,
+            .profile-avatar {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
             .download-btn {
                 align-self: flex-start;
+            }
+
+            .cover-image-container {
+                margin-left: -1.5rem;
+                margin-right: -1.5rem;
+                margin-top: -1.5rem;
+            }
+
+            .header-left {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
@@ -369,6 +415,33 @@
             }
         }
 
+        @media (min-width: 769px) {
+            header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .contact-details {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.5rem;
+                text-align: left;
+                width: 100%;
+                border-top: 1px solid #e2e8f0;
+                padding-top: 1.2rem;
+                margin-top: 0.5rem;
+            }
+            .contact-details span,
+            .contact-details a {
+                justify-content: flex-start;
+            }
+            .download-btn {
+                align-self: center;
+                margin-top: 0;
+            }
+        }
+
         @page {
             margin: 1cm;
         }
@@ -425,16 +498,22 @@
 <body>
 
     <div class="container">
-        <header>
-            <div class="header-info">
-                <h1>Divyavrat Jugtawat</h1>
-                <h2>Sr. Software Engineer</h2>
-                <p style="max-width: 600px; color: var(--text-light); margin-top: 0.5rem;">
-                    Sr. Software Engineer with 10+ years of experience leading teams and delivering over 100 projects
-                    for US and international clients. Expert in the MERN stack (React.js, Express, MongoDB) and
-                    leveraging AI tools (ChatGPT, Gemini, Claude) for efficient full-stack
-                    development, prototyping, and code review.
-                </p>
+        <div class="cover-image-container">
+            <img src="img/divyavrat cover.jpg" alt="Cover Banner" class="profile-cover" loading="lazy">
+        </div>
+        <header style="padding-top: 1.5rem;">
+            <div class="header-left">
+                <img src="img/divyavrat.jpg" alt="Divyavrat Jugtawat" class="profile-avatar" loading="lazy">
+                <div class="header-info">
+                    <h1>Divyavrat Jugtawat</h1>
+                    <h2>Sr. Software Engineer</h2>
+                    <p style="max-width: 600px; color: var(--text-light); margin-top: 0.5rem;">
+                        Sr. Software Engineer with 10+ years of experience leading teams and delivering over 100
+                        projects for US and international clients. Expert in the MERN stack (React.js, Express, MongoDB) and
+                        leveraging AI assisted workflow (ChatGPT, Github Copilot, Gemini, Claude) for efficient full-stack
+                        development, prototyping, and code review.
+                    </p>
+                </div>
             </div>
             <div class="contact-details">
                 <a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a>
@@ -444,7 +523,7 @@
                 <a href="https://github.com/divyavrat/">GitHub</a>
                 <a href="Divyavrat CV.pdf" download="Divyavrat CV.pdf" class="download-btn">Download CV</a>
                 <a href="Divyavrat CV.MD" download="Divyavrat_CV.MD" class="visually-hidden"
-                    aria-hidden="false">Download MD</a>
+                     aria-hidden="false">Download MD</a>
             </div>
         </header>
 
@@ -482,15 +561,12 @@
                         present</p>
                     <div class="job-desc">
                         <ul>
-                            <li>Multiple team projects in the Utility sector for US, Australia, Canada and Asian
-                                clients.</li>
-                            <li>Training new interns to work on existing codebase</li>
+                            <li>Multiple team projects in the Utility sector for US, Australia, Canada and Asian clients.</li>
+                            <li>Training & Onboarding new joinees to work on legacy codebases</li>
                             <li>New implementations of old features like Usage Graphs & Charts</li>
-                            <li>AI use to boost productivity for code completion, reviews, debugging, documentations
-                                and task management using Github Copilot, Chat GPT, Claude, Gemini CLI</li>
+                            <li>AI-assisted development workflow to boost productivity for code completion, reviews, debugging, documentations and task management leveraging Github Copilot, Chat GPT, Claude, Gemini CLI</li>
                         </ul>
-                        <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, Postgres SQL
-                        </div>
+                        <div class="tech-stack"><strong>Tech Stack:</strong> React, Redux, MongoDB, PostgreSQL</div>
                     </div>
                 </div>
 
@@ -554,11 +630,11 @@
                     <p class="visually-hidden">Sr. Software Engineer — Sarga Technologies, Jodhpur — 2019</p>
                     <div class="job-desc">
                         <ul>
-                            <li>Developed React Js Web applications, React Native Apps</li>
+                            <li>Developed React JS Web applications, React Native Apps</li>
                             <li>Created designs from Zeplin and Sketch files to React</li>
                             <li>Worked with Clients to fulfill User workflow Stories</li>
                             <li>Created Enterprise Level management Webapps in React</li>
-                            <li>Recreated Static Website in React Js from Laravel</li>
+                            <li>Recreated Static Website in React JS from Laravel</li>
                             <li>Improved UI Designs for 3 websites in Laravel and React</li>
                         </ul>
                     </div>
@@ -580,7 +656,7 @@
                                 with impeccable record of client satisfaction.</li>
                             <li>Delivered 100+ projects in major technologies and platforms - native / hybrid
                                 Android apps, core PHP websites, React apps</li>
-                            <li>Continuous improvement and maintenance of multiple projects with 10lk+ users and
+                            <li>Continuous improvement and maintenance of multiple projects with 10M+ users and
                                 real-time traffic.</li>
                         </ul>
                     </div>
@@ -608,37 +684,26 @@
             <section id="recommendations">
                 <h3>Recommendations</h3>
                 <div class="testimonial-item">
-                    <p>"Divyavrat Jugtawat is a key team member in Cleco project. Divyavrat has scaled himself up
-                        really well and picked up the most complex modules i.e. Outage and Usage in Cleco R3
-                        delivery. Divyavrat understood the requirements very well and helped in delivering these
-                        complex modules with highest quality. Divyavrat is approachable whenever required and has
-                        always stretched his limits to meet the project level objectives & timelines. I strongly
-                        feel Divyavrat is an asset for SEW and would like to appreciate him for the efforts,
-                        dedication, and hard work that he has put in Cleco project."</p>
-                    <div class="testimonial-author">- Director, Product Delivery SEW.ai</div>
+                    <p>"Divyavrat Jugtawat is a key team member in Cleco project. Divyavrat has scaled himself up really
+                        well and picked up the most complex modules i.e. Outage and Usage in Cleco R3 delivery.
+                        Divyavrat understood the requirements very well and helped in delivering these complex modules
+                        with highest quality. Divyavrat is approachable whenever required and has always stretched his
+                        limits to meet the project level objectives & timelines. I strongly feel Divyavrat is an asset
+                        for SEW and would like to appreciate him for the efforts, dedication, and hard work that he has
+                        put in Cleco project."</p>
+                    <div class="testimonial-author">- A. Kaushal, Director of Product Delivery, SEW.ai</div>
                 </div>
                 <div class="testimonial-item">
-                    <p>"Divyavrat is a great developer to work with. Always on time. Work is always professional and
-                        correct. He is willing to make changes to make the customer happy. Divyavrat was a pleasure
-                        to work with. Nothing was a problem. He definitely understands coding very well and
-                        recommend him any day. Looking forward to work together again soon. Although my work was
-                        very complex, he delivered a great work and changed it until it met all my needs."</p>
-                    <div class="testimonial-author">- D (US Client)</div>
+                    <p>"Divyavrat proved himself to be an exceptionally capable engineer and a reliable technical
+                        leader. He did not simply implement features—he shaped architectural decisions and improved
+                        development workflows."</p>
+                    <div class="testimonial-author">- E. King, Founder CEO, The Venti Group</div>
                 </div>
                 <div class="testimonial-item">
-                    <p>"Divyavrat provides an outstanding service. He met my criteria for the Firefox extension that
-                        I needed programmed and worked with me when ever I needed something changed. I'm very happy
-                        with the work he has produced and highly recommend him as a skilled programmer. Always
-                        fantastic work and very prompt! Great communication and takes the time to ensure things are
-                        exactly as I want. Thank you!"</p>
-                    <div class="testimonial-author">- H (US Client)</div>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Divyavrat is one of the best people I have ever had the pleasure of working with in all of
-                        time. He is very professional and responsible. I asked him to fix some things several times,
-                        some were things I had not told him before, and he did everything I asked him. I will
-                        definitely love to work with him again."</p>
-                    <div class="testimonial-author">- Ed (US Client)</div>
+                    <p>"What stood out most was his ability to take full ownership of projects without requiring
+                        constant supervision. He reliably translates broad business requirements into complete technical
+                        solutions."</p>
+                    <div class="testimonial-author">- D. Sussman, Owner & CEO, Know CPR LLC</div>
                 </div>
             </section>
 
@@ -649,9 +714,7 @@
                     <div class="company">JIET, Jodhpur</div>
                     <div class="date">2011 - 2015</div>
                     <p style="font-size: 0.95rem; margin-top: 0.25rem;">
-                        Taught multiple coding workshops. Participated in hackathons and college level competitions.
-                        Attended a coding lab alongside M.Tech. Students for final year. Created Aplaun OS and
-                        published research papers on Assembly Language OS Dev.
+                        Gave multiple expert lectures and workshops on OS Dev, C++ Graphics programming, Game Dev. Participated in hackathons and college level competitions. Attended a senior coding lab alongside M.Tech. Students for final year. Created Aplaun OS and published research papers on Assembly Language OS Dev in conferences.
                     </p>
                 </div>
                 <div class="education-item">
@@ -673,23 +736,22 @@
             <section id="certifications">
                 <h3>Certifications</h3>
                 <ul class="compact-list" style="padding-left: 1.2rem; margin-bottom: 2rem;">
-                    <li>AI - Skill India Course</li>
-                    <li>Secure Coding and VAPT</li>
+                    <li>AWS Certified Developer - Infosys Associate Certification</li>
+                    <li>Agile Product Management and Scrum Framework - Scrum Inc.</li>
                     <li>SEW Product Delivery Methodology</li>
-                    <li>Security Awareness Training</li>
-                    <li>SAP Overview</li>
                     <li>Enterprise Systems - SAP and Oracle</li>
+                    <li>Secure Coding and Vulnerability Assessment (VAPT)</li>
                 </ul>
             </section>
 
             <section id="skills">
                 <h3>Skills</h3>
                 <div class="skills-grid">
-                    <span class="skill-tag">AI tools (ChatGPT, Github Copilot, Gemini, Claude)</span>
-                    <span class="skill-tag">MERN stack (React.js, Express, MongoDB)</span>
-                    <span class="skill-tag">Native + Hybrid Android development (Expo, React Native, Java)</span>
-                    <span class="skill-tag">Core PHP, SQL</span>
-                    <span class="skill-tag">Assembly 8086 OS Dev</span>
+                    <span class="skill-tag">Modern MERN stack: Next.js, React.js, Node Express, MongoDB Prisma, Strict TS</span>
+                    <span class="skill-tag">Native + Hybrid Android development: Expo, React Native, Java</span>
+                    <span class="skill-tag">Programming: C++, Core PHP, Assembly 8086 OS Dev, HTML5 CSS3 JS + ESNext</span>
+                    <span class="skill-tag">Cloud, DevOps & Data: AWS, GCP, Docker, SQL (PostgreSQL, MySQL), CI/CD Automation</span>
+                    <span class="skill-tag">AI tools: ChatGPT Codex, Github Copilot, Gemini CLI, Claude Code</span>
                 </div>
             </section>
 
@@ -697,58 +759,24 @@
                 <h3>Key Projects</h3>
 
                 <div class="project-item">
-                    <div class="project-title"><a href="https://github.com/Divyavrat/aplaun" target="_blank"
-                            rel="noopener">Aplaun OS</a></div> <span class="project-tech">- Assembly 8086</span>
-                    <div class="project-desc">
-                        <ul>
-                            <li>Initiated and worked 2yrs to build a new portable OS with Compilers, Games, and
-                                Softwares with JIET MTech Dept using 8086 Assembly language.</li>
-                            <li>Authored 2 research papers on OS Development using Assembly. <a
-                                    href="https://www.ijert.org/overview-of-architecture-and-application-of-clone-os"
-                                    target="_blank" rel="noopener">Read papers</a></li>
-                            <li>Took student workshops to teach OS Development.</li>
-                            <li>Features: Bootloader, GUI, ASM/C Compiler support, Games, Audio/Mouse/Keyboard
-                                drivers.</li>
-                        </ul>
-                        <p style="margin-top:0.5rem; font-size:0.95rem;">Repository: <a
-                                href="https://github.com/Divyavrat/aplaun" target="_blank"
-                                rel="noopener">github.com/Divyavrat/aplaun</a></p>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-title">Boutique Retail Website</div> <span class="project-tech">- React,
-                        Redux, Mongo, SQL</span>
-                    <div class="project-desc">
-                        Worked on Store / Delivery Retail with in-store Services
-                        <ul>
-                            <li>Worked in modules related to administration of appointments, customer management,
-                                order management.</li>
-                            <li>Building Node APIs for new features in development.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-title">Interview Management</div> <span class="project-tech">- React JS,
-                        Next JS, Mongo, CSS3</span>
+                    <div class="project-title">Interview Management</div> <span class="project-tech">- React JS, Next
+                        JS, Mongo, CSS3, integrated AI</span>
                     <div class="project-desc">
                         Application to manage Jobs, Candidates and set up online video interviews. Inbuilt-feedback
                         system.
                         <ul>
                             <li>Role: Project Leader</li>
-                            <li>Quick start up with JIRA project planning</li>
-                            <li>Reuse existing React ES6 code base to get started in UI, API and Mailing features
-                            </li>
+                            <li>Reuse existing React ES6 code base to get started in UI, API and Mailing features</li>
                             <li>Design created in Adobe XD. Converted to HTML5, CSS3.</li>
                             <li>Integrated Video calling, chatting features for the interview.</li>
+                            <li>AI assisted- resume parsing and job details</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Charity & Donations Management</div> <span class="project-tech">-
-                        React JS, NextJS, MongoDB</span>
+                    <div class="project-title">Charity & Donations Management</div> <span class="project-tech">- React
+                        JS, NextJS, MongoDB</span>
                     <div class="project-desc">
                         Multi-layered full stack webapp to create and manage US donation pages.
                         <ul>
@@ -762,12 +790,45 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Delhi World</div> <span class="project-tech">- React JS, tJS,
+                    <div class="project-title"><a href="https://github.com/Divyavrat/aplaun" target="_blank"
+                            rel="noopener">Aplaun OS</a></div> <span class="project-tech">- Assembly 8086</span>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Initiated and worked 2yrs to build a new portable OS with Compilers, Games, and
+                                Softwares with JIET MTech Dept using 8086 Assembly language.</li>
+                            <li>Authored 2 research papers on OS Development using Assembly. <a
+                                    href="https://www.ijert.org/overview-of-architecture-and-application-of-clone-os"
+                                    target="_blank" rel="noopener">Read papers</a></li>
+                            <li>Took student workshops to teach OS Development.</li>
+                            <li>Features: Bootloader, GUI, ASM/C Compiler support, Games, Audio/Mouse/Keyboard drivers.
+                            </li>
+                        </ul>
+                        <p style="margin-top:0.5rem; font-size:0.95rem;">Repository: <a
+                                href="https://github.com/Divyavrat/aplaun" target="_blank"
+                                rel="noopener">github.com/Divyavrat/aplaun</a></p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Madison Reed Management Portal</div> <span class="project-tech">- React,
+                        Redux, Mongo, SQL</span>
+                    <div class="project-desc">
+                        Worked on Store / Delivery Retail with in-store Services
+                        <ul>
+                            <li>Worked in modules related to administration of appointments, customer management, order
+                                management.</li>
+                            <li>Building Node APIs for new features in development.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Delhi Women World</div> <span class="project-tech">- React JS, tJS,
                         MongoDB, Android</span>
                     <div class="project-desc">
                         Complete Wholesale Retailer solution
                         <ul>
-                            <li>Step-wise User access - Owner > Wholesale Buyer > Retailer > Customer</li>
+                            <li>Multiple User roles - Owner > Wholesale Buyer > Retailer > Customer</li>
                             <li>In-built chat and payment options.</li>
                             <li>Inventory Management</li>
                         </ul>
@@ -775,11 +836,21 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Cricket Fantasy App</div> <span class="project-tech">- js, Android,
-                        Webpack build script</span>
+                    <div class="project-title">Boutique Africaine Website</div> <span class="project-tech">- CS Cart
+                        CMS, Core PHP, SQL</span>
                     <div class="project-desc">
-                        Created the entire app for initial release between 2018-2019, Second version released in
-                        2021.
+                        <ul>
+                            <li>New UI design for landing page, item details, cart and payment flows.</li>
+                            <li>Building custom user flows using extensions and widgets.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Cricket Fantasy Prediction App</div> <span class="project-tech">-
+                        Javascript, jQuery, CSS3, Android java, Webpack build script</span>
+                    <div class="project-desc">
+                        Created the entire app for initial release between 2018-2019, Second version released in 2021.
                         <ul>
                             <li>Role: Full Stack Development and Project Tech Lead</li>
                             <li>App Development with more than 10k+ lines of code and 50+ pages.</li>
@@ -792,16 +863,15 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Doctor Medical slip Software</div> <span class="project-tech">- js,
+                    <div class="project-title">Rx Medical Prescription Software</div> <span class="project-tech">- js,
                         PHP, MySQL</span>
                     <div class="project-desc">
                         <ul>
                             <li>Role: Full Stack Development and Project Tech Lead</li>
                             <li>Met with Hospital Chief of Medicine and Resident Doctors to discuss technological
                                 solutions to their tedious workflow.</li>
-                            <li>Designed new Doctor Medical Slip Software for Doctors to rapidly create slips and
-                                printed out with history, symptoms and lab tests to avoid doctor’s handwritten
-                                slips.</li>
+                            <li>Designed new Doctor Medical Prescription Software to rapidly create slips and printed
+                                out with history, symptoms and lab tests to avoid handwritten slips.</li>
                             <li>Hospital Management Tools for various Roles to handle Reports, Accounting and Old
                                 Patient Records.</li>
                         </ul>
@@ -809,14 +879,14 @@
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">Coaching Center Management</div> <span class="project-tech">- PHP,
-                        MySQL</span>
+                    <div class="project-title">TSP Education - Coaching Center LMS</div> <span class="project-tech">-
+                        PHP, MySQL</span>
                     <div class="project-desc">
                         <ul>
                             <li>Role: Full Stack Development and Project Tech Lead</li>
                             <li>Fast, Responsive, SEO-friendly and Dynamic Landing Page with modern design elements.
                             </li>
-                            <li>Student Attendance, Online Test, QA with teachers, Time tables / Notes tools,
+                            <li>E-Courses, Student Attendance, Online Test, QA with teachers, Time tables / Notes tools,
                                 Discussion forums.</li>
                             <li>Anonymous teacher and staff rating system.</li>
                             <li>Parent app and notifications for missed classes.</li>
@@ -904,37 +974,30 @@
                 <div class="project-item">
                     <div class="project-desc">
                         <ul>
-                            <li><strong>Eco Pro Cleaning</strong> - PHP site with Cleaner Log, Services, Blog,
-                                Admin, Login, Appointment, Invoices.</li>
-                            <li><strong>Asmin Khatoon - Unique Home Care</strong> - static site design and
-                                deployment.</li>
-                            <li><strong>SRA Website</strong> - MERN site and Adobe XD UI design with modules like
-                                Login and Pricing.</li>
-                            <li><strong>Patitva Matrimony Site</strong> - React UI built from Zeplin design.</li>
+                            <li><strong>Patitva Matrimony Site</strong> - created React UI from Zeplin UI design.</li>
+                            <li><strong>TV Tub Android App</strong> - to show fan-made wallpapers, video edits for
+                                Indian TV Drama Serials from Sony and Colors channels.</li>
+                            <li><strong>Eco Pro Cleaning service management portal</strong> - created PHP site with
+                                features like Cleaner Log, Services, Blog, Admin, Login, Appointment, Invoices.</li>
+                            <li><strong>Asmin khatoon Unique Home Care</strong> - static site design and deployment.
+                            </li>
+                            <li><strong>SRA Website</strong> - created MERN site and Adobe XD UI design with multiple
+                                modules like Login, Pricing.</li>
                             <li><strong>Event Management Android App</strong> - built with a JIET student team.</li>
-                            <li><strong>File Sharing App</strong> - centralised server with multiple user roles.
-                            </li>
-                            <li><strong>Dictionary Chrome Extension</strong> - shows internal jargon meanings from
-                                enterprise dictionary file.</li>
-                            <li><strong>Offers & Coupon Management</strong> - competitor to Grabon and Coupdunia.
-                            </li>
-                            <li><strong>TV Tub Android App</strong> - fan-made wallpapers and video edits for Indian
-                                TV serials.</li>
+                            <li><strong>Enterprise File Sharing App</strong> - with centralised server and multiple user
+                                roles.</li>
+                            <li><strong>Dictionary Chrome Extension</strong> - to show internal jargon meaning from
+                                enterprise specialized dictionary file.</li>
+                            <li><strong>Offers and Coupon management site</strong> - competitor to grabon and
+                                coupondunia.</li>
                             <li><strong>E-Invitation</strong> - static websites for private weddings.</li>
-                            <li><strong>Haptik Chrome Plugin</strong> - assistants with radio FM, games, wallpapers,
+                            <li><strong>Haptik Chrome Plugin</strong> - for assistants with radio FM, games, wallpapers,
                                 inbuilt google search.</li>
-                            <li><strong>Pushkarna Brahman Online Family Tree</strong> - Core PHP site with node
-                                search.</li>
-                            <li><strong>E-Learning Hybridskill Training</strong> - site in React for training and
-                                courses.</li>
-                            <li><strong>Donation Site</strong> - built for non-profit GlobalMindED.</li>
-                            <li><strong>Australia Rentals Portal</strong> - React-based rental listing platform.
+                            <li><strong>Pushkarna Brahman Online Family Tree</strong> - Core PHP site with node search.
                             </li>
-                            <li><strong>Jai Vijay Book Centre</strong> - Hybrid Android app. Play Store: <a
-                                    href="https://play.google.com/store/apps/details?id=com.jaivijaybookcentre.app"
-                                    target="_blank" rel="noopener">Play Store</a>, Website: <a
-                                    href="http://www.jaivijaybookcentre.com/" target="_blank"
-                                    rel="noopener">jaivijaybookcentre.com</a></li>
+                            <li><strong>E-Learning Hybridskill Training site</strong> - in React.</li>
+                            <li><strong>Donation Site for Non-Profit GlobalMindED</strong> - in React.</li>
+                            <li><strong>Rentronics Australia Portal</strong> - in React.</li>
                         </ul>
                     </div>
                 </div>
@@ -944,63 +1007,101 @@
                 <h3>Portfolio</h3>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <img src="img/portfolio/interview 2.png" alt="interview 2" loading="lazy">
+                        <img src="img/portfolio/delhi-women-world-9.jpg" alt="Delhi Women World App" loading="lazy">
                     </div>
                     <div class="portfolio-item">
-                        <img src="img/portfolio/interview.png" alt="interview" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/3d soulxslayer portfolio.jpg" alt="3d soulxslayer portfolio"
+                        <img src="img/portfolio/boutique-africaine-hero.jpg" alt="Boutique Africaine E-commerce"
                             loading="lazy">
                     </div>
                     <div class="portfolio-item">
-                        <img src="img/portfolio/leo portfolio.jpg" alt="leo portfolio" loading="lazy">
+                        <img src="img/portfolio/interview 2.jpg" alt="Interview Management App Mockup" loading="lazy">
                     </div>
                     <div class="portfolio-item">
-                        <img src="img/portfolio/music.png" alt="music" loading="lazy">
+                        <img src="img/portfolio/jiet-college-site.jpg" alt="JIET College Portal" loading="lazy">
                     </div>
                     <div class="portfolio-item">
-                        <img src="img/portfolio/pizza portfolio.jpg" alt="pizza portfolio" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/bookstore app.jpg" alt="bookstore app" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/aplaunos.png" alt="aplaunos" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/dj evian portfolio.jpg" alt="dj evian portfolio" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/music db.JPG" alt="music db" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/sandeep music.jpg" alt="sandeep music" loading="lazy">
-                    </div>
-                    <div class="portfolio-item">
-                        <br />
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/color prediction app 2 long.jpg" alt="color prediction app 2 long"
+                        <img src="img/portfolio/jai-vijay-book-centre.jpg" alt="Jai Vijay Book Centre App"
                             loading="lazy">
                     </div>
                     <div class="portfolio-item">
-                        <img src="img/portfolio/cricket prediction app long.jpg" alt="cricket prediction app long"
+                        <img src="img/portfolio/wedding-e-invitation.jpg" alt="Wedding E-Invitation Website"
                             loading="lazy">
                     </div>
                     <div class="portfolio-item">
-                        <img src="img/portfolio/leo portfolio long.jpg" alt="leo portfolio long" loading="lazy">
+                        <img src="img/portfolio/interview.jpg" alt="Interview Management App" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/aplaunos.jpg" alt="Aplaun OS Assembly" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/3d soulxslayer portfolio.jpg" alt="3D Artist Portfolio" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/leo portfolio.jpg" alt="Leonardo Callie Portfolio" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/music.jpg" alt="Music App Interface" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/music db.JPG" alt="Music Database App" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/sandeep music.jpg" alt="Sandeep Khurana Music Maestro App"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/pizza portfolio.jpg" alt="Pizzeria Website" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/bookstore app.jpg" alt="Bookstore Application" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/tsp-education-php.jpg" alt="TSP Education PHP Portal" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/dj evian portfolio.jpg" alt="DJ Evian Portfolio" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/tsp-education-landing.jpg" alt="TSP Education LMS" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <!-- Long height images start here -->
+                        <img src="img/portfolio/leo portfolio long.jpg" alt="Leonardo Callie Portfolio Full"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/color prediction app 2 long.jpg" alt="Color Prediction App"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/cricket prediction app long.jpg" alt="Cricket Fantasy Prediction App"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/rx-medical-prescription.jpg" alt="Rx Medical Prescription App"
+                            loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/tv-tub-app.jpg" alt="TV Tub Android App" loading="lazy">
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/tsp-education-vedicmaths.jpg" alt="TSP Education Vedic Maths"
+                            loading="lazy">
                     </div>
                 </div>
             </section>
 
             <section id="contact">
                 <h3>Contact</h3>
-                <div class="contact-details"
-                    style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left; align-items: flex-start;">
-                    <a href="mailto:divyavrat@gmail.com" style="justify-content: flex-start;">divyavrat@gmail.com</a>
-                    <a href="tel:+918890055140" style="justify-content: flex-start;">(+91) 88900 55140</a>
-                    <span style="justify-content: flex-start;">Jodhpur, Rajasthan</span>
+                <div class="contact-details">
+                    <a href="mailto:divyavrat@gmail.com">divyavrat@gmail.com</a>
+                    <a href="tel:+918890055140">(+91) 88900 55140</a>
+                    <span>Jodhpur, Rajasthan</span>
+                    <a href="https://www.linkedin.com/in/divyavrat/">LinkedIn</a>
+                    <a href="https://github.com/divyavrat/">GitHub</a>
+                    <a href="Divyavrat CV.pdf" download="Divyavrat CV.pdf" class="download-btn">Download CV</a>
+                    <a href="Divyavrat CV.MD" download="Divyavrat_CV.MD" class="visually-hidden"
+                         aria-hidden="false">Download MD</a>
                 </div>
             </section>
 

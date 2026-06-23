@@ -4,15 +4,15 @@
 
 # **Professional Summary**
 
-Sr. Software Engineer with 10+ years of experience leading teams and delivering over 100 projects for US and international clients. Expert in the MERN stack (React.js, Express, MongoDB) and leveraging AI first tools (ChatGPT, Github Copilot, Gemini, Claude) for efficient full-stack development, prototyping, and code review.
+Sr. Software Engineer with 10+ years of experience leading teams and delivering over 100 projects for US and international clients. Expert in the MERN stack (React.js, Express, MongoDB) and leveraging AI assisted workflow (ChatGPT, Github Copilot, Gemini, Claude) for efficient full-stack development, prototyping, and code review.
 
 # **Skills**
 
-* MERN stack (React.js, Express, MongoDB)  
-* Core PHP, SQL  
-* Native \+ Hybrid Android development (Expo, React Native, Java)  
-* Assembly 8086 OS Dev  
-* AI first tools (ChatGPT, Github Copilot, Gemini, Claude)
+* **Modern MERN stack \-** Next.js React.js, Node Express, MongoDB Prisma, Strict TS  
+* **Native \+ Hybrid Android development** \- Expo, React Native, Java  
+* **Programming-** C++, Core PHP,  Assembly 8086 OS Dev, HTML5 CSS3 JS \+ ESNext  
+* **Cloud, DevOps & Data**: AWS, GCP, Docker, SQL (PostgreSQL, MySQL), CI/CD Automation  
+* **AI tools \-** ChatGPT Codex, Github Copilot, Gemini CLI, Claude Code
 
 # **Work Experience**
 
@@ -21,10 +21,10 @@ Sr. Software Engineer with 10+ years of experience leading teams and delivering 
 ### **Utility Tech Product MNC***\- Sr. Product Engineer – React*
 
 * Multiple team projects in the Utility sector for US, Australia, Canada and Asian clients.  
-* Training new interns to work on existing codebase  
+* Training & Onboarding new joinees to work on legacy codebases  
 * New implementations of old features like Usage Graphs & Charts  
-* AI use to boost productivity for code completion, reviews, debugging, documentations and task management using Github Copilot, Chat GPT, Claude, Gemini CLI  
-* Tech Stack Used \- React, Redux, MongoDB, Postgres SQL
+* AI-assisted development workflow to boost productivity for code completion, reviews, debugging, documentations and task management leveraging Github Copilot, Chat GPT, Claude, Gemini CLI  
+* Tech Stack Used \- React, Redux, MongoDB, PostgreSQL
 
 ## 2021 \- 2023
 
@@ -52,11 +52,11 @@ Sr. Software Engineer with 10+ years of experience leading teams and delivering 
 
 ### **Sarga Technologies , Jodhpur** *\- Sr. Software Engineer*
 
-* Developed React Js Web applications,  React Native Apps  
+* Developed React JS Web applications,  React Native Apps  
 * Created designs from Zeplin and Sketch files to React  
 * Worked with Clients to fulfill User workflow Stories  
 * Created Enterprise Level management Webapps in React  
-* Recreated  Static Website in React Js from Laravel  
+* Recreated  Static Website in React JS from Laravel  
 * Improved UI Designs for 3 websites in Laravel and React
 
 ## 2016-2018
@@ -65,7 +65,7 @@ Sr. Software Engineer with 10+ years of experience leading teams and delivering 
 
 * Worked with multiple international clients and stakeholders  on business requirements, user flows, Price / Timeline negotiations, deliverables, Maintenance with impeccable record of client satisfaction.  
 * Delivered 100+ projects in major technologies and platforms \- native / hybrid Android apps, core PHP websites, React apps  
-* Continuous improvement and maintenance of multiple projects with 10lk+ users and real-time traffic.
+* Continuous improvement and maintenance of multiple projects with 10M+ users and real-time traffic.
 
 ## 2015
 
@@ -96,26 +96,22 @@ Created [Aplaun OS](https://github.com/Divyavrat/aplaun) and [published research
 
 **Certifications**
 
-AI \- Skill India Course  
-Secure Coding and VAPT  
+AWS Certified Developer \- Infosys Associate Certification  
+Agile Product Management and Scrum Framework \- Scrum Inc.  
 SEW Product Delivery Methodology  
-Security Awareness Training  
-SAP Overview  
-Enterprise Systems \- SAP and Oracle
+Enterprise Systems \- SAP and Oracle  
+Secure Coding and Vulnerability Assessment (VAPT)
 
 **Recommendations**
 
-Divyavrat Jugtawat is a key team member in Cleco project. Divyavrat has scaled himself up really well and picked up the most complex modules i.e. Outage and Usage in Cleco R3 delivery. Divyavrat understood the requirements very well and helped in delivering these complex modules with highest quality. Divyavrat is approachable whenever required and has always stretched his limits to meet the project level objectives & timelines. I strongly feel Divyavrat is an asset for SEW and would like to appreciate him for the efforts, dedication, and hard work that he has put in Cleco project.  
-\- **Director, Product Delivery SEW.ai**
+“Divyavrat Jugtawat is a key team member in Cleco project. Divyavrat has scaled himself up really well and picked up the most complex modules i.e. Outage and Usage in Cleco R3 delivery. Divyavrat understood the requirements very well and helped in delivering these complex modules with highest quality. Divyavrat is approachable whenever required and has always stretched his limits to meet the project level objectives & timelines. I strongly feel Divyavrat is an asset for SEW and would like to appreciate him for the efforts, dedication, and hard work that he has put in Cleco project.”  
+\- **A. Kaushal**, **Director of Product Delivery, SEW.ai**
 
-Divyavrat is a great developer to work with. Always on time. Work is always professional and correct. He is willing to make changes to make the customer happy. Divyavrat was a pleasure to work with. Nothing was a problem. He definitely understands coding very well and recommend him any day. Looking forward to work together again soon. Although my work was very complex, he delivered a great work and changed it until it met all my needs.  
-**\- D (US Client)**
+"Divyavrat proved himself to be an exceptionally capable engineer and a reliable technical leader. He did not simply implement features—he shaped architectural decisions and improved development workflows."  
+**\- E. King, Founder CEO, The Venti Group**
 
-Divyavrat provides an outstanding service. He met my criteria for the Firefox extension that I needed programmed and worked with me when ever I needed something changed. I'm very happy with the work he has produced and highly recommend him as a skilled programmer. Always fantastic work and very prompt\! Great communication and takes the time to ensure things are exactly as I want. Thank you\!  
-**\- H (US Client)**
-
-Divyavrat is one of the best people I have ever had the pleasure of working with in all of time. He is very professional and responsible. I asked him to fix some things several times, some were things I had not told him before, and he did everything I asked him. I will definitely love to work with him again.  
-**\- Ed (US Client)**
+“What stood out most was his ability to take full ownership of projects without requiring constant supervision. He reliably translates broad business requirements into complete technical solutions."  
+**\- D. Sussman, Owner & CEO, Know CPR LLC**
 
 # **Key Projects**
 
@@ -133,30 +129,15 @@ Divyavrat is one of the best people I have ever had the pleasure of working with
   * Partial semaphore handling for process threading  
   * Mouse, Audio, Keyboard drivers
 
-### **Boutique Retail Website** *\-* React, Redux, Mongo, SQL, 
-
-Worked on Store / Delivery Retail with in-store Services 
-
-* Worked in modules related to administration of appointments, customer management, order management.  
-* Building Node APIs for new features in development.
-
-### 
-
-### 
-
-### **Interview Management** *\- React JS,* Next JS, Mongo, CSS3
+### **Interview Management** *\- React JS,* Next JS, Mongo, CSS3, integrated AI
 
 Application to manage Jobs, Candidates and set up online video interviews. Inbuilt-feedback system.
 
 * Role: Project Leader  
-* Quick start up with JIRA project planning  
 * Reuse existing React ES6 code base to get started in UI, API and Mailing features  
 * Design created in Adobe XD. Converted to HTML5, CSS3.  
-* Integrated Video calling, chatting features for the interview.
-
-### 
-
-### 
+* Integrated Video calling, chatting features for the interview.  
+* AI assisted- resume parsing and job details
 
 ### **Charity & Donations Management** *\- React JS,* NextJS, MongoDB
 
@@ -167,15 +148,27 @@ Multi-layered full stack webapp to create and manage US donation pages.
 * DOM Testing with Jest.  
 * Converted to Material UI \+ CSS3 design from Adobe XD Design provided by UI Designer.
 
-### **Delhi World** *\- React JS,* tJS, MongoDB, Android
+### **Madison Reed Management Portal** *\-* React, Redux, Mongo, SQL, 
+
+Worked on Store / Delivery Retail with in-store Services 
+
+* Worked in modules related to administration of appointments, customer management, order management.  
+* Building Node APIs for new features in development.
+
+### **Delhi Women World** *\- React JS,* tJS, MongoDB, Android
 
 Complete Wholesale Retailer solution
 
-* Step-wise User access \- Owner \> Wholesale Buyer \> Retailer \> Customer  
+* Multiple User roles \- Owner \> Wholesale Buyer \> Retailer \> Customer  
 * In-built chat and payment options.  
 * Inventory Management
 
-### **Cricket Fantasy App** *\- js,* Android, Webpack build script
+### **Boutique Africaine Website** *\-* CS Cart CMS, Core PHP , SQL, 
+
+* New UI design for landing page, item details, cart and payment flows.  
+* Building custom user flows using extensions and widgets.
+
+### **Cricket Fantasy Prediction App** *\- Javascript, jQuery, CSS3,* Android java, Webpack
 
 Created the entire app for initial release between 2018-2019, Second version released in 2021\.
 
@@ -186,18 +179,18 @@ Created the entire app for initial release between 2018-2019, Second version rel
 * Automatic Management Scripts to Handle Match Cancellations, Prizes  
 * Automated testing for Pages, Monetary Changes, API loads and Business Logic.
 
-### **Doctor Medical slip Software** *\-* js, PHP, MySQL
+### **Rx Medical Prescription Software** *\-* PHP, MySQL, jQuery JS
 
 * Role: Full Stack Development and Project Tech Lead  
 * Met with Hospital Chief of Medicine and Resident Doctors to discuss technological solutions to their tedious workflow.  
-* Designed new Doctor Medical Slip Software for Doctors to rapidly create slips and printed out with history, symptoms and lab tests to avoid doctor’s handwritten slips.  
+* Designed new Doctor Medical Prescription Software to rapidly create slips and printed out with history, symptoms and lab tests to avoid handwritten slips.  
 * Hospital Management Tools for various Roles to handle Reports, Accounting and Old Patient Records.
 
-### **Coaching Center Management** *\-* PHP, MySQL
+### **TSP Education \- Coaching Center LMS** *\-* PHP, MySQL
 
 * Role: Full Stack Development and Project Tech Lead  
 * Fast, Responsive, SEO-friendly and Dynamic Landing Page with modern design elements.  
-* Student Attendance, Online Test, QA with teachers, Time tables / Notes tools, Discussion forums.  
+* E-Courses, Student Attendance, Online Test, QA with teachers, Time tables / Notes tools, Discussion forums.  
 * Anonymous teacher and staff rating system.  
 * Parent app and  notifications for missed classes.  
 * Administration Tools to manage content and reporting.
@@ -245,18 +238,18 @@ Music & Meditation app showcasing 20 tracks of all genres from the US based musi
 
 # **Additional Projects**
 
-* **Eco Pro Cleaning** \- created PHP site with features like Cleaner Log, Services, Blog, Admin, Login, Appointment, Invoices  
+* **Patitva Matrimony Site** \- created React UI from Zeplin UI design  
+* **TV Tub Android App** \- to show fan-made wallpapers, video edits for Indian TV Drama Serials from Sony and Colors channels.  
+* **Eco Pro Cleaning** **service management portal** \- created PHP site with features like Cleaner Log, Services, Blog, Admin, Login, Appointment, Invoices  
 * **Asmin khatoon Unique Home Care** \- static site design and deployment  
 * **SRA Website** \- created MERN site and Adobe XD UI design with multiple modules like Login, Pricing  
-* **Patitva Matrimony Site** \- created React UI from Zeplin UI design  
 * **Event Management Android App with JIET student team**  
-* **File Sharing App \-** with centralised server and multiple user roles  
+* **Enterprise File Sharing App \-** with centralised server and multiple user roles  
 * **Dictionary Chrome Extension** \- to show internal jargon meaning from enterprise specialized dictionary file  
 * **Offers and Coupon management site \-** competitor to grabon and coupondunia  
-* **TV Tub Android App** \- to show fan-made wallpapers, video edits for Indian TV Drama Serials from Sony and Colors channels.  
 * **E-Invitation \-** static websites for private weddings  
 * **Haptik Chrome Plugin** \- for assistants with radio FM, games, wallpapers, inbuilt google search  
 * **Pushkarna Brahman Online Family Tree** \- Core PHP site with node search  
 * **E-Learning Hybridskill Training site \-** in React  
 * **Donation Site for Non-Profit GlobalMindED**  
-* **Australia Rentals Portal \-** in React
+* **Rentronics Australia Portal \-** in React
